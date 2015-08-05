@@ -1,0 +1,2 @@
+C:\Users\eddie\vcc2_3-src\vcc\Setup\SamplesSetup\bin\Debug\Samples.msi
+C:\Users\eddie\vcc2_3-src\vcc\Setup\SamplesSetup\bin\Debug\Samples.wixpdb

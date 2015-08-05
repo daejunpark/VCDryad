@@ -1,0 +1,5 @@
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\bin\Release\Microsoft.Research.Vcc.Runtime.dll
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\bin\Release\Microsoft.Research.Vcc.Runtime.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\obj\Release\VccRuntime.csprojResolveAssemblyReference.cache
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\obj\Release\Microsoft.Research.Vcc.Runtime.dll
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\obj\Release\Microsoft.Research.Vcc.Runtime.pdb

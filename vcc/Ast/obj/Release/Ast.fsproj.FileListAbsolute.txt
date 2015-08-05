@@ -1,0 +1,5 @@
+C:\Users\eddie\vcc2_3-src\vcc\Ast\bin\Release\Microsoft.Research.Vcc.Ast.dll
+C:\Users\eddie\vcc2_3-src\vcc\Ast\bin\Release\Microsoft.Research.Vcc.Ast.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Ast\obj\Release\Microsoft.Research.Vcc.Ast.dll
+C:\Users\eddie\vcc2_3-src\vcc\Ast\obj\Release\Microsoft.Research.Vcc.Ast.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Ast\obj\Release\Ast.fsprojResolveAssemblyReference.cache

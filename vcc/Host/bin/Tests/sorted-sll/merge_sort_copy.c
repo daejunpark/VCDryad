@@ -1,0 +1,39 @@
+#include "dryad_srtl.h"
+
+_(dryad)
+SNnode * merge_sort_copy(SNnode * l1, SNnode * l2)
+	_(requires srtl(l1))
+	_(requires srtl(l2))
+  _(requires \oset_disjoint(srtl_reach(l1), srtl_reach(l2)))
+	_(ensures srtl(\result))
+	_(ensures sll_keys(\result) == \intset_union(\old(sll_keys(l1)), \old(sll_keys(l2))))
+{
+	_(assume mutable_list(l1))
+	_(assume mutable_list(l2))
+
+	if (l1 == NULL) {
+		return l2;
+	} else if (l2 == NULL) {
+		return l1;
+	} else {
+		if (l1->key <= l2->key) {
+			SNnode * tl = merge_sort_copy(l1->next, l2);
+			SNnode * nl = (SNnode *) malloc(sizeof(SNnode));
+      _(assume nl != NULL)
+      int l1_key = l1->key;
+			nl->key  = l1_key;
+			nl->next = tl;
+			return nl;	
+		} else {
+			SNnode * tl = merge_sort_copy(l1, l2->next);
+			SNnode * nl = (SNnode *) malloc(sizeof(SNnode));
+      _(assume nl != NULL)
+      
+      int l2_key = l2->key;
+			nl->key = l2_key;
+			nl->next = tl;
+
+			return nl;
+		}
+	}
+}

@@ -1,0 +1,5 @@
+obj\Debug\Vcc.wixobj
+C:\Users\eddie\vcc2_3-src\vcc\Setup\Setup\bin\Debug\Setup.msi
+obj\Debug\Setup.wixproj.BindContentsFileListnull.txt
+obj\Debug\Setup.wixproj.BindOutputsFileListnull.txt
+obj\Debug\Setup.wixproj.BindBuiltOutputsFileListnull.txt

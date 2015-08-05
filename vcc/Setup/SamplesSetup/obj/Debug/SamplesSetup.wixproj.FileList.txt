@@ -1,0 +1,7 @@
+C:\Users\eddie\vcc2_3-src\vcc\Setup\SamplesSetup\bin\Debug\Samples.msi
+C:\Users\eddie\vcc2_3-src\vcc\Setup\SamplesSetup\bin\Debug\Samples.wixpdb
+obj\Debug\Samples.Files.wixobj
+obj\Debug\Samples.wixobj
+obj\Debug\SamplesSetup.wixproj.BindContentsFileListnull.txt
+obj\Debug\SamplesSetup.wixproj.BindOutputsFileListnull.txt
+obj\Debug\SamplesSetup.wixproj.BindBuiltOutputsFileListnull.txt

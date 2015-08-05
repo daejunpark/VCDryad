@@ -1,0 +1,8 @@
+C:\Users\eddie\vcc2_3-src\vcc\SyntaxHighlightingParser\bin\Debug\SyntaxHighlightingParser.XML
+C:\Users\eddie\vcc2_3-src\vcc\SyntaxHighlightingParser\bin\Debug\Microsoft.Research.Vcc.VSPackage.Parser.dll
+C:\Users\eddie\vcc2_3-src\vcc\SyntaxHighlightingParser\bin\Debug\Microsoft.Research.Vcc.VSPackage.Parser.pdb
+C:\Users\eddie\vcc2_3-src\vcc\SyntaxHighlightingParser\obj\Debug\Lexer.fs
+C:\Users\eddie\vcc2_3-src\vcc\SyntaxHighlightingParser\obj\Debug\Parser.fs
+C:\Users\eddie\vcc2_3-src\vcc\SyntaxHighlightingParser\obj\Debug\Microsoft.Research.Vcc.VSPackage.Parser.dll
+C:\Users\eddie\vcc2_3-src\vcc\SyntaxHighlightingParser\obj\Debug\Microsoft.Research.Vcc.VSPackage.Parser.pdb
+C:\Users\eddie\vcc2_3-src\vcc\SyntaxHighlightingParser\obj\Debug\SyntaxHighlightingParser.fsprojResolveAssemblyReference.cache

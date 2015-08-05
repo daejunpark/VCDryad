@@ -1,0 +1,3329 @@
+*** MODEL
+%lbl%+3820 -> true
+%lbl%+3813 -> true
+%lbl%+38565 -> true
+ite#1@0 -> true
+%lbl%+3815 -> true
+%lbl%+3822 -> true
+$position_marker -> true
+%lbl%+3811 -> true
+%lbl%@42192 -> false
+call1611formal@SP#hd@0 -> *2
+local.h@0 -> *2
+local.j@1 -> *2
+call1653formal@SP#hd@0 -> *2
+local.j@2 -> *2
+unique-value!81 -> *3
+^^null_type -> *4
+$max.i8 -> 9223372036854775807
+#distTp1 -> *6
+$fk_owns -> *7
+cev_global -> *8
+$fk_emb_array -> *9
+#file^?3Cno?20file?3E -> *10
+SL#_dryad_S0@1 -> *11
+SL#_dryad_S0@0 -> *11
+stmtexpr0#5@0 -> *11
+$s -> *11
+unique-value!79 -> *12
+$untyped_owner_owner -> *13
+$max.u4 -> 4294967295
+$fk_ref_cnt -> *15
+^^field -> *16
+$max.u2 -> 65535
+loop_entered -> *18
+unique-value!59 -> *19
+$ctype_flat -> *20
+$fk_as_array_first -> *21
+call1611formal@$result@0 -> as-array[boogie-array#0]
+SL#_dryad_G0@0 -> as-array[boogie-array#0]
+call1653formal@$result@0 -> as-array[boogie-array#0]
+$s@0 -> *23
+stmtexpr1#6@0 -> *23
+SL#_dryad_S1@1 -> *23
+SL#_dryad_S1@0 -> *23
+$s@1 -> *23
+P#j -> *24
+unique-value!67 -> *25
+P#h -> *26
+^$#state_t -> *27
+^$#struct -> *28
+^$#seq_version -> *29
+^^u4 -> *30
+^^nat -> *31
+^$#volatile_version_t -> *32
+$ctype_blob -> *33
+$max.i2 -> 32767
+unique-value!72 -> *35
+unique-value!75 -> *36
+^$#_onexit_t#8 -> *37
+unique-value!90 -> *38
+^s_node -> *39
+local.j@0 -> *40
+call1630formal@SP#hd@0 -> *40
+call1653formal@SP#tl@0 -> *40
+call2627formal@p@0 -> *40
+^^u2 -> *41
+$min.i8 -> -9223372036854775808
+#file^c?3A?5Cusers?5Ceddie?5Cvcc2_3?2Dsrc?5Cvcc?5Chost?5Cbin?5Cdebug?5Cafwp?5Cdryad_SLL_basic.h -> *43
+unique-value!85 -> *44
+unique-value!95 -> *45
+#wrTime$2^3.3 -> 974
+^^f4 -> *47
+unique-value!92 -> *48
+^^claim -> *49
+call1630formal@$result@0 -> as-array[boogie-array#1]
+$max.i4 -> 2147483647
+$decreases_level -> 2147483647
+cf#sll_reach -> *52
+$me -> *53
+^^bool -> *54
+$max.i1 -> 127
+^$#_PtFuncCompare#5 -> *56
+cev_parameter -> *57
+$untyped_owner -> *58
+unique-value!63 -> *59
+unique-value!74 -> *60
+^$#ptrset -> *61
+#file^C?3A?5CUsers?5Ceddie?5Cvcc2_3?2Dsrc?5Cvcc?5CHost?5Cbin?5CDebug?5Cafwp?5Cbuggy?2DSLL?2Drotate.c -> *62
+^$##club -> *63
+^^mathint -> *64
+unique-value!98 -> *65
+cf#sll_lseg_reach -> *66
+local.h@1 -> *67
+L#k@0 -> *67
+L#k@1 -> *67
+local.h@2 -> *67
+unique-value!66 -> *68
+unique-value!60 -> *69
+$arch_ptr_size -> 8
+$struct_zero -> *71
+s_node.key -> *72
+unique-value!80 -> *73
+#tok$3^0.0 -> *74
+unique-value!88 -> *75
+unique-value!84 -> *76
+conditional_moment -> *77
+$min.i1 -> -128
+unique-value!61 -> *79
+unique-value!65 -> *80
+^^f8 -> *81
+unique-value!87 -> *82
+unique-value!89 -> *83
+$fk_base -> *84
+^^u8 -> *85
+$arch_ptr_type -> *85
+$set_empty -> as-array[boogie-array#2]
+lambda@13 -> as-array[boogie-array#2]
+lambda@19 -> as-array[boogie-array#2]
+$ctype_ptr -> *87
+^$#_PtFuncCompare#7 -> *88
+unique-value!82 -> *89
+$fk_vol_version -> *90
+unique-value!99 -> *91
+$max.u1 -> 255
+^^i1 -> *93
+^^object -> *94
+$max.u8 -> 18446744073709551615
+$arch_spec_ptr_start -> 18446744073709551615
+$ctype_spec_ptr -> *96
+unique-value!62 -> *97
+unique-value!93 -> *98
+^^void -> *99
+unique-value!70 -> *100
+^$#_PtFuncCompare#6 -> *101
+cev_local -> *102
+$fk_active_option -> *103
+$ctype_array -> *104
+unique-value!77 -> *105
+@MV_state_const -> 98
+$ctype_map -> *107
+loop_register -> *108
+$null -> *109
+^^i4 -> *110
+$fk_allocation_root -> *111
+unique-value!68 -> *112
+^$#_purecall_handler#1 -> *113
+loop_exited -> *114
+$min.i2 -> -32768
+^$#buggy_SLL_rotate.c..36142#3 -> *116
+cev_implicit -> *117
+s_node.next -> *118
+^^u1 -> *119
+cf#sll -> *120
+$primitive_emb_type -> *121
+unique-value!71 -> *122
+$no_claim -> *123
+^$#oset -> *124
+call2627formal@v@0 -> 100
+took_else_branch -> *126
+^^i8 -> *127
+unique-value!96 -> *128
+took_then_branch -> *129
+#tok$2^17.5 -> *130
+unique-value!76 -> *131
+unique-value!83 -> *132
+^$##thread_id -> *133
+$min.i4 -> -2147483648
+unique-value!64 -> *135
+unique-value!69 -> *136
+^$#_invalid_parameter_handler#2 -> *137
+$untyped_owner_type -> *138
+^^i2 -> *139
+^$#thread_id_t -> *140
+unique-value!91 -> *141
+unique-value!73 -> *142
+cf#sll_lseg -> *143
+^$#vol_version -> *144
+unique-value!86 -> *145
+unique-value!94 -> *146
+#tok$2^3.3 -> *147
+^$#intset -> *148
+unique-value!78 -> *149
+^$#_PtFuncCompare#4 -> *150
+unique-value!97 -> *151
+$cev_pc -> **$cev_pc
+stmtexpr1#6 -> **stmtexpr1#6
+SL#_dryad_S1 -> **SL#_dryad_S1
+stmtexpr0#5 -> **stmtexpr0#5
+SL#_dryad_S0 -> **SL#_dryad_S0
+L#k -> **L#k
+ite#1 -> **ite#1
+stmtexpr1#8 -> **stmtexpr1#8
+stmtexpr0#7 -> **stmtexpr0#7
+res_sll_lseg_reach#4 -> **res_sll_lseg_reach#4
+res_sll_reach#3 -> **res_sll_reach#3
+res_sll_reach#2 -> **res_sll_reach#2
+SL#_dryad_G1 -> **SL#_dryad_G1
+SL#_dryad_G0 -> **SL#_dryad_G0
+local.j -> **local.j
+local.h -> **local.h
+#stackframe -> **#stackframe
+boogie-array#0 -> {
+  *40 -> true
+  *158 -> true
+  *67 -> true
+  *160 -> true
+  *159 -> false
+  *157 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> true
+  *164 -> true
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> true
+  *169 -> false
+  *170 -> false
+  *171 -> true
+  *172 -> false
+  *173 -> false
+  *2 -> true
+  *174 -> false
+  *175 -> false
+  *177 -> false
+  *176 -> true
+  *186 -> false
+  *178 -> false
+  *179 -> false
+  *182 -> false
+  *181 -> true
+  *183 -> false
+  *184 -> false
+  *180 -> false
+  *185 -> true
+  *187 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *194 -> true
+  *192 -> false
+  *195 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> true
+  *201 -> false
+  *202 -> true
+  *203 -> true
+  *204 -> true
+  *205 -> true
+  *206 -> false
+  *207 -> true
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+boogie-array#1 -> {
+  *157 -> false
+  *67 -> false
+  *40 -> false
+  *158 -> false
+  *159 -> false
+  *160 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *178 -> false
+  *179 -> false
+  *180 -> false
+  *181 -> false
+  *182 -> false
+  *183 -> false
+  *184 -> false
+  *185 -> false
+  *186 -> false
+  *187 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *192 -> false
+  *193 -> false
+  *194 -> false
+  *195 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+boogie-array#2 -> {
+  *67 -> false
+  *40 -> false
+  *158 -> false
+  *157 -> false
+  *159 -> false
+  *160 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *179 -> false
+  *182 -> false
+  *183 -> false
+  *180 -> false
+  *184 -> false
+  *181 -> false
+  *187 -> false
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *192 -> false
+  *195 -> false
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+boogie-array#3 -> {
+  *183 -> true
+  *40 -> false
+  *67 -> false
+  *184 -> true
+  *187 -> false
+  *182 -> true
+  *188 -> true
+  *189 -> true
+  *161 -> false
+  *160 -> true
+  *181 -> false
+  *158 -> false
+  *194 -> false
+  *164 -> false
+  *165 -> false
+  *167 -> false
+  *166 -> true
+  *197 -> true
+  *196 -> true
+  *168 -> false
+  *163 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *200 -> true
+  *204 -> true
+  *173 -> true
+  *202 -> false
+  *2 -> false
+  *206 -> true
+  *203 -> false
+  *207 -> false
+  *205 -> false
+  *209 -> true
+  *211 -> false
+  *212 -> true
+  *177 -> false
+  *176 -> false
+  *213 -> true
+  *178 -> true
+  *186 -> true
+  *185 -> false
+  else -> false
+}
+boogie-array#4 -> {
+  *67 -> true
+  *40 -> true
+  *158 -> true
+  *160 -> true
+  *159 -> false
+  *157 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> true
+  *164 -> true
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> true
+  *169 -> false
+  *170 -> false
+  *171 -> true
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> true
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *180 -> false
+  *182 -> false
+  *181 -> true
+  *183 -> false
+  *184 -> false
+  *179 -> false
+  *185 -> true
+  *187 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *194 -> true
+  *192 -> false
+  *195 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> true
+  *201 -> false
+  *202 -> true
+  *203 -> true
+  *204 -> true
+  *205 -> true
+  *206 -> false
+  *207 -> true
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+boogie-array#5 -> {
+  *40 -> false
+  *67 -> true
+  *158 -> false
+  *157 -> true
+  *159 -> true
+  *160 -> false
+  *161 -> true
+  *162 -> true
+  *163 -> false
+  *164 -> false
+  *165 -> true
+  *166 -> false
+  *167 -> true
+  *168 -> false
+  *169 -> true
+  *170 -> true
+  *171 -> false
+  *172 -> true
+  *173 -> false
+  *2 -> true
+  *174 -> true
+  *175 -> true
+  *177 -> true
+  *176 -> false
+  *186 -> false
+  *178 -> false
+  *180 -> true
+  *181 -> false
+  *182 -> false
+  *183 -> false
+  *184 -> false
+  *179 -> true
+  *187 -> true
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> true
+  *191 -> true
+  *193 -> true
+  *192 -> true
+  *195 -> true
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> true
+  *199 -> true
+  *200 -> false
+  *201 -> true
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> true
+  *209 -> false
+  *210 -> true
+  *211 -> true
+  *212 -> false
+  *213 -> false
+  *214 -> true
+  else -> false
+}
+boogie-array#6 -> {
+  *67 -> true
+  *40 -> false
+  *158 -> false
+  *157 -> true
+  *159 -> true
+  *160 -> false
+  *161 -> true
+  *162 -> true
+  *163 -> false
+  *164 -> false
+  *165 -> true
+  *166 -> false
+  *167 -> true
+  *168 -> false
+  *169 -> true
+  *170 -> true
+  *171 -> false
+  *172 -> true
+  *173 -> false
+  *2 -> false
+  *174 -> true
+  *175 -> true
+  *176 -> false
+  *177 -> true
+  *186 -> false
+  *178 -> false
+  *180 -> true
+  *181 -> false
+  *182 -> false
+  *179 -> true
+  *184 -> false
+  *183 -> false
+  *187 -> true
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> true
+  *191 -> true
+  *193 -> true
+  *192 -> true
+  *195 -> true
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> true
+  *199 -> true
+  *200 -> false
+  *201 -> true
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> true
+  *209 -> false
+  *210 -> true
+  *211 -> true
+  *212 -> false
+  *213 -> false
+  *214 -> true
+  else -> false
+}
+boogie-array#7 -> {
+  *40 -> false
+  *67 -> false
+  *157 -> true
+  *158 -> false
+  *159 -> true
+  *160 -> false
+  *161 -> true
+  *162 -> true
+  *163 -> false
+  *164 -> false
+  *165 -> true
+  *167 -> true
+  *166 -> false
+  *168 -> false
+  *169 -> true
+  *170 -> true
+  *171 -> false
+  *172 -> true
+  *173 -> false
+  *2 -> false
+  *174 -> true
+  *175 -> true
+  *176 -> false
+  *177 -> true
+  *186 -> false
+  *178 -> false
+  *180 -> true
+  *181 -> false
+  *182 -> false
+  *179 -> true
+  *184 -> false
+  *183 -> false
+  *187 -> true
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> true
+  *191 -> true
+  *193 -> true
+  *192 -> true
+  *195 -> true
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> true
+  *199 -> true
+  *200 -> false
+  *201 -> true
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> true
+  *210 -> true
+  *209 -> false
+  *211 -> true
+  *212 -> false
+  *213 -> false
+  *214 -> true
+  else -> false
+}
+boogie-array#8 -> {
+  else -> 103
+}
+boogie-array#9 -> {
+  *2 -> 101
+  *40 -> 100
+  *67 -> 99
+  else -> 102
+}
+boogie-array#10 -> {
+  *159 -> 105
+  else -> 105
+}
+boogie-array#11 -> {
+  else -> *418
+}
+boogie-array#12 -> {
+  else -> false
+}
+boogie-array#13 -> {
+  *2 -> 101
+  *40 -> 104
+  *67 -> 99
+  else -> 102
+}
+boogie-array#14 -> {
+  *118 -> as-array[boogie-array#13]
+  else -> as-array[boogie-array#10]
+}
+boogie-array#15 -> {
+  *118 -> as-array[boogie-array#9]
+  else -> as-array[boogie-array#10]
+}
+boogie-array#16 -> {
+  else -> *419
+}
+boogie-array#17 -> {
+  *185 -> false
+  *40 -> true
+  *67 -> false
+  *184 -> true
+  *187 -> false
+  *183 -> true
+  *188 -> true
+  *189 -> true
+  *161 -> false
+  *160 -> true
+  *181 -> false
+  *158 -> false
+  *194 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> true
+  *196 -> true
+  *197 -> true
+  *167 -> false
+  *168 -> false
+  *163 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *200 -> true
+  *204 -> true
+  *173 -> true
+  *202 -> false
+  *2 -> false
+  *206 -> true
+  *203 -> false
+  *207 -> false
+  *205 -> false
+  *209 -> true
+  *211 -> false
+  *212 -> true
+  *177 -> false
+  *176 -> false
+  *213 -> true
+  *178 -> true
+  *186 -> true
+  *182 -> true
+  else -> false
+}
+boogie-array#18 -> {
+  *40 -> true
+  *67 -> true
+  *158 -> false
+  *157 -> true
+  *159 -> true
+  *160 -> false
+  *161 -> true
+  *162 -> true
+  *163 -> false
+  *164 -> false
+  *165 -> true
+  *166 -> false
+  *167 -> true
+  *168 -> false
+  *169 -> true
+  *170 -> true
+  *171 -> false
+  *172 -> true
+  *173 -> false
+  *2 -> true
+  *174 -> true
+  *175 -> true
+  *177 -> true
+  *176 -> false
+  *178 -> false
+  *186 -> false
+  *179 -> true
+  *181 -> false
+  *182 -> false
+  *183 -> false
+  *184 -> false
+  *180 -> true
+  *187 -> true
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *191 -> true
+  *190 -> true
+  *192 -> true
+  *195 -> true
+  *193 -> true
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> true
+  *199 -> true
+  *200 -> false
+  *201 -> true
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> true
+  *209 -> false
+  *210 -> true
+  *211 -> true
+  *212 -> false
+  *213 -> false
+  *214 -> true
+  else -> false
+}
+boogie-array#19 -> {
+  *40 -> true
+  *67 -> false
+  *158 -> false
+  *157 -> false
+  *159 -> false
+  *160 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *180 -> false
+  *181 -> false
+  *183 -> false
+  *179 -> false
+  *184 -> false
+  *182 -> false
+  *187 -> false
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *195 -> false
+  *192 -> false
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+boogie-array#20 -> {
+  *158 -> false
+  *40 -> false
+  *160 -> false
+  *67 -> false
+  *159 -> false
+  *157 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> true
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *180 -> false
+  *181 -> false
+  *183 -> false
+  *179 -> false
+  *184 -> false
+  *182 -> false
+  *187 -> false
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *191 -> false
+  *190 -> false
+  *192 -> false
+  *193 -> false
+  *195 -> false
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+boogie-array#21 -> {
+  *67 -> true
+  *157 -> false
+  *40 -> false
+  *158 -> false
+  *159 -> false
+  *160 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *179 -> false
+  *181 -> false
+  *182 -> false
+  *183 -> false
+  *184 -> false
+  *180 -> false
+  *187 -> false
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *192 -> false
+  *195 -> false
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *204 -> false
+  *203 -> false
+  *202 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+boogie-array#22 -> {
+  *67 -> false
+  *40 -> false
+  *160 -> true
+  *158 -> false
+  *159 -> false
+  *157 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *177 -> false
+  *176 -> false
+  *186 -> false
+  *178 -> false
+  *179 -> false
+  *182 -> false
+  *185 -> false
+  *183 -> false
+  *184 -> false
+  *180 -> false
+  *181 -> false
+  *187 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *194 -> false
+  *192 -> false
+  *195 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> true
+  *201 -> false
+  *204 -> true
+  *202 -> false
+  *203 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+k!106 -> {
+  *40 -> true
+  *158 -> true
+  *67 -> true
+  *160 -> true
+  *159 -> false
+  *157 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> true
+  *164 -> true
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> true
+  *169 -> false
+  *170 -> false
+  *171 -> true
+  *172 -> false
+  *173 -> false
+  *2 -> true
+  *174 -> false
+  *175 -> false
+  *177 -> false
+  *176 -> true
+  *186 -> false
+  *178 -> false
+  *179 -> false
+  *182 -> false
+  *181 -> true
+  *183 -> false
+  *184 -> false
+  *180 -> false
+  *185 -> true
+  *187 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *194 -> true
+  *192 -> false
+  *195 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> true
+  *201 -> false
+  *202 -> true
+  *203 -> true
+  *204 -> true
+  *205 -> true
+  *206 -> false
+  *207 -> true
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+k!104 -> {
+  *157 -> false
+  *67 -> false
+  *40 -> false
+  *158 -> false
+  *159 -> false
+  *160 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *178 -> false
+  *179 -> false
+  *180 -> false
+  *181 -> false
+  *182 -> false
+  *183 -> false
+  *184 -> false
+  *185 -> false
+  *186 -> false
+  *187 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *192 -> false
+  *193 -> false
+  *194 -> false
+  *195 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+k!105 -> {
+  *67 -> false
+  *40 -> false
+  *158 -> false
+  *157 -> false
+  *159 -> false
+  *160 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *179 -> false
+  *182 -> false
+  *183 -> false
+  *180 -> false
+  *184 -> false
+  *181 -> false
+  *187 -> false
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *192 -> false
+  *195 -> false
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+$function_arg_type -> {
+  *120 0 *54 -> true
+  *120 1 *6 -> true
+  *52 0 *124 -> true
+  *52 1 *6 -> true
+  *143 0 *54 -> true
+  *143 1 *6 -> true
+  *143 2 *6 -> true
+  *66 0 *124 -> true
+  *66 1 *6 -> true
+  *66 2 *6 -> true
+  else -> true
+}
+$ptr_to -> {
+  *39 -> *6
+  else -> *6
+}
+$is_volatile_field -> {
+  *155 -> true
+  *156 -> true
+  else -> true
+}
+$is_phys_field -> {
+  *72 -> true
+  *118 -> true
+  *215 -> true
+  else -> true
+}
+$base -> {
+  *109 -> 0
+  *53 -> 824
+  *58 -> 2494
+  *13 -> 361
+  *123 -> 18446744073709558526
+  *2 -> 8517
+  *40 -> 0
+  *197 -> 8519
+  *67 -> 8518
+  *26 -> 18446744073709558685
+  *24 -> 18446744073709558808
+  *225 -> 18446744073709555333
+  *227 -> 18446744073709555326
+  *180 -> 5580
+  *230 -> 18446744073709556236
+  else -> 0
+}
+$ptr -> {
+  *232 0 -> *109
+  *233 18446744073709558526 -> *123
+  *234 824 -> *53
+  *235 2494 -> *58
+  *234 361 -> *13
+  *215 8517 -> *2
+  *215 0 -> *40
+  *236 18446744073709558685 -> *26
+  *237 18446744073709558808 -> *24
+  *238 18446744073709555333 -> *225
+  *239 18446744073709555326 -> *227
+  *215 8519 -> *197
+  *215 8518 -> *67
+  *240 18446744073709556236 -> *230
+  *215 5580 -> *180
+  else -> *109
+}
+$ptr_to_int -> {
+  *2 -> 100
+  else -> 100
+}
+$good_state -> {
+  *241 -> true
+  *11 -> true
+  *23 -> true
+  else -> true
+}
+k!103 -> {
+  *159 -> 105
+  else -> 105
+}
+$addr -> {
+  *2 -> 8517
+  *40 -> 0
+  *24 -> 0
+  *26 -> 8517
+  else -> 0
+}
+$addr0 -> {
+  *109 -> 0
+  *123 -> 0
+  *53 -> 824
+  *58 -> 2494
+  *13 -> 361
+  *2 -> 8517
+  *26 -> 8517
+  *40 -> 0
+  *24 -> 0
+  *197 -> 8519
+  *225 -> 8519
+  *67 -> 8518
+  *227 -> 8518
+  *180 -> 5580
+  *230 -> 5580
+  else -> 0
+}
+$is_proper -> {
+  *53 -> true
+  *58 -> true
+  *13 -> true
+  else -> true
+}
+k!102 -> {
+  *2 -> 101
+  *40 -> 104
+  *67 -> 99
+  else -> 102
+}
+F#sll_reach -> {
+  *11 *40 -> as-array[boogie-array#1]
+  *11 *2 -> as-array[boogie-array#0]
+  *11 *197 -> as-array[boogie-array#3]
+  *11 *67 -> as-array[boogie-array#4]
+  *23 *2 -> as-array[boogie-array#5]
+  *23 *67 -> as-array[boogie-array#6]
+  *23 *180 -> as-array[boogie-array#7]
+  else -> as-array[boogie-array#1]
+}
+k!108 -> {
+  *183 -> true
+  *40 -> false
+  *67 -> false
+  *184 -> true
+  *187 -> false
+  *182 -> true
+  *188 -> true
+  *189 -> true
+  *161 -> false
+  *160 -> true
+  *181 -> false
+  *158 -> false
+  *194 -> false
+  *164 -> false
+  *165 -> false
+  *167 -> false
+  *166 -> true
+  *197 -> true
+  *196 -> true
+  *168 -> false
+  *163 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *200 -> true
+  *204 -> true
+  *173 -> true
+  *202 -> false
+  *2 -> false
+  *206 -> true
+  *203 -> false
+  *207 -> false
+  *205 -> false
+  *209 -> true
+  *211 -> false
+  *212 -> true
+  *177 -> false
+  *176 -> false
+  *213 -> true
+  *178 -> true
+  *186 -> true
+  *185 -> false
+  else -> false
+}
+k!110 -> {
+  *67 -> true
+  *40 -> true
+  *158 -> true
+  *160 -> true
+  *159 -> false
+  *157 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> true
+  *164 -> true
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> true
+  *169 -> false
+  *170 -> false
+  *171 -> true
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> true
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *180 -> false
+  *182 -> false
+  *181 -> true
+  *183 -> false
+  *184 -> false
+  *179 -> false
+  *185 -> true
+  *187 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *194 -> true
+  *192 -> false
+  *195 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> true
+  *201 -> false
+  *202 -> true
+  *203 -> true
+  *204 -> true
+  *205 -> true
+  *206 -> false
+  *207 -> true
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+k!116 -> {
+  *40 -> false
+  *67 -> true
+  *158 -> false
+  *157 -> true
+  *159 -> true
+  *160 -> false
+  *161 -> true
+  *162 -> true
+  *163 -> false
+  *164 -> false
+  *165 -> true
+  *166 -> false
+  *167 -> true
+  *168 -> false
+  *169 -> true
+  *170 -> true
+  *171 -> false
+  *172 -> true
+  *173 -> false
+  *2 -> true
+  *174 -> true
+  *175 -> true
+  *177 -> true
+  *176 -> false
+  *186 -> false
+  *178 -> false
+  *180 -> true
+  *181 -> false
+  *182 -> false
+  *183 -> false
+  *184 -> false
+  *179 -> true
+  *187 -> true
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> true
+  *191 -> true
+  *193 -> true
+  *192 -> true
+  *195 -> true
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> true
+  *199 -> true
+  *200 -> false
+  *201 -> true
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> true
+  *209 -> false
+  *210 -> true
+  *211 -> true
+  *212 -> false
+  *213 -> false
+  *214 -> true
+  else -> false
+}
+k!115 -> {
+  *67 -> true
+  *40 -> false
+  *158 -> false
+  *157 -> true
+  *159 -> true
+  *160 -> false
+  *161 -> true
+  *162 -> true
+  *163 -> false
+  *164 -> false
+  *165 -> true
+  *166 -> false
+  *167 -> true
+  *168 -> false
+  *169 -> true
+  *170 -> true
+  *171 -> false
+  *172 -> true
+  *173 -> false
+  *2 -> false
+  *174 -> true
+  *175 -> true
+  *176 -> false
+  *177 -> true
+  *186 -> false
+  *178 -> false
+  *180 -> true
+  *181 -> false
+  *182 -> false
+  *179 -> true
+  *184 -> false
+  *183 -> false
+  *187 -> true
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> true
+  *191 -> true
+  *193 -> true
+  *192 -> true
+  *195 -> true
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> true
+  *199 -> true
+  *200 -> false
+  *201 -> true
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> true
+  *209 -> false
+  *210 -> true
+  *211 -> true
+  *212 -> false
+  *213 -> false
+  *214 -> true
+  else -> false
+}
+k!119 -> {
+  *40 -> false
+  *67 -> false
+  *157 -> true
+  *158 -> false
+  *159 -> true
+  *160 -> false
+  *161 -> true
+  *162 -> true
+  *163 -> false
+  *164 -> false
+  *165 -> true
+  *167 -> true
+  *166 -> false
+  *168 -> false
+  *169 -> true
+  *170 -> true
+  *171 -> false
+  *172 -> true
+  *173 -> false
+  *2 -> false
+  *174 -> true
+  *175 -> true
+  *176 -> false
+  *177 -> true
+  *186 -> false
+  *178 -> false
+  *180 -> true
+  *181 -> false
+  *182 -> false
+  *179 -> true
+  *184 -> false
+  *183 -> false
+  *187 -> true
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> true
+  *191 -> true
+  *193 -> true
+  *192 -> true
+  *195 -> true
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> true
+  *199 -> true
+  *200 -> false
+  *201 -> true
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> true
+  *210 -> true
+  *209 -> false
+  *211 -> true
+  *212 -> false
+  *213 -> false
+  *214 -> true
+  else -> false
+}
+$in_range_phys_ptr -> {
+  *2 -> true
+  *40 -> true
+  *197 -> true
+  *67 -> true
+  *180 -> true
+  else -> true
+}
+@MV_state -> {
+  98 0 -> true
+  98 1 -> true
+  98 2 -> true
+  98 3 -> true
+  98 4 -> true
+  98 5 -> true
+  98 6 -> true
+  98 7 -> true
+  98 8 -> true
+  98 9 -> true
+  98 10 -> true
+  98 11 -> true
+  98 12 -> true
+  98 13 -> true
+  98 14 -> true
+  98 15 -> true
+  98 16 -> true
+  98 17 -> true
+  98 18 -> true
+  98 19 -> true
+  98 20 -> true
+  98 21 -> true
+  98 22 -> true
+  98 23 -> true
+  98 24 -> true
+  98 25 -> true
+  98 26 -> true
+  98 27 -> true
+  98 28 -> true
+  98 30 -> true
+  98 31 -> true
+  98 32 -> true
+  98 33 -> true
+  98 34 -> true
+  98 35 -> true
+  98 36 -> true
+  98 37 -> true
+  98 38 -> true
+  98 39 -> true
+  98 40 -> true
+  98 41 -> true
+  98 42 -> true
+  98 43 -> true
+  98 44 -> true
+  98 45 -> true
+  98 46 -> true
+  98 47 -> true
+  98 48 -> true
+  98 49 -> true
+  98 50 -> true
+  98 51 -> true
+  98 52 -> true
+  98 53 -> true
+  98 54 -> true
+  98 55 -> true
+  98 56 -> true
+  98 57 -> true
+  98 58 -> true
+  98 59 -> true
+  98 60 -> true
+  98 61 -> true
+  98 62 -> true
+  98 63 -> true
+  98 64 -> true
+  98 65 -> true
+  98 66 -> true
+  98 67 -> true
+  98 68 -> true
+  98 69 -> true
+  98 70 -> true
+  98 71 -> true
+  98 72 -> true
+  98 73 -> true
+  98 74 -> true
+  98 75 -> true
+  98 76 -> true
+  98 77 -> true
+  98 78 -> true
+  98 79 -> true
+  98 80 -> true
+  98 81 -> true
+  98 82 -> true
+  98 83 -> true
+  98 84 -> true
+  98 85 -> true
+  98 86 -> true
+  98 87 -> true
+  98 88 -> true
+  else -> true
+}
+$as_primitive_field -> {
+  *72 -> *72
+  *118 -> *118
+  *232 -> *232
+  *336 -> *336
+  *337 -> *337
+  *155 -> *155
+  *156 -> *156
+  *338 -> *338
+  else -> *72
+}
+k!101 -> {
+  else -> 103
+}
+k!122 -> {
+  *67 -> false
+  *40 -> false
+  *160 -> true
+  *158 -> false
+  *159 -> false
+  *157 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *177 -> false
+  *176 -> false
+  *186 -> false
+  *178 -> false
+  *179 -> false
+  *182 -> false
+  *185 -> false
+  *183 -> false
+  *184 -> false
+  *180 -> false
+  *181 -> false
+  *187 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *194 -> false
+  *192 -> false
+  *195 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> true
+  *201 -> false
+  *204 -> true
+  *202 -> false
+  *203 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+$call_transition -> {
+  *11 *11 -> true
+  *11 *23 -> true
+  else -> true
+}
+k!100 -> {
+  *2 -> 101
+  *40 -> 100
+  *67 -> 99
+  else -> 102
+}
+$unchecked -> {
+  *30 4294967296 -> 0
+  *85 18446744073709551616 -> 0
+  *30 -1 -> 4294967295
+  *85 -1 -> 18446744073709551615
+  *85 0 -> 0
+  *85 -112 -> 0
+  *85 824 -> 824
+  *85 2494 -> 2494
+  *85 361 -> 361
+  *85 -8702 -> 8517
+  *85 8517 -> 8517
+  *85 18446744073709551617 -> 0
+  *85 18446744073709567193 -> 8519
+  *85 8519 -> 8519
+  *85 8518 -> 8518
+  *85 -8547 -> 5580
+  *85 18446744073709559227 -> 8518
+  *85 5580 -> 5580
+  else -> 0
+}
+k!121 -> {
+  *67 -> true
+  *157 -> false
+  *40 -> false
+  *158 -> false
+  *159 -> false
+  *160 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *179 -> false
+  *181 -> false
+  *182 -> false
+  *183 -> false
+  *184 -> false
+  *180 -> false
+  *187 -> false
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *192 -> false
+  *195 -> false
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *204 -> false
+  *203 -> false
+  *202 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+k!120 -> {
+  *158 -> false
+  *40 -> false
+  *160 -> false
+  *67 -> false
+  *159 -> false
+  *157 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> true
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *180 -> false
+  *181 -> false
+  *183 -> false
+  *179 -> false
+  *184 -> false
+  *182 -> false
+  *187 -> false
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *191 -> false
+  *190 -> false
+  *192 -> false
+  *193 -> false
+  *195 -> false
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+$is_primitive -> {
+  *93 -> true
+  *139 -> true
+  *110 -> true
+  *127 -> true
+  *119 -> true
+  *41 -> true
+  *30 -> true
+  *85 -> true
+  *47 -> true
+  *81 -> true
+  *54 -> true
+  *99 -> true
+  *94 -> true
+  *16 -> true
+  *4 -> true
+  *49 -> false
+  *32 -> false
+  *64 -> true
+  *31 -> true
+  *61 -> true
+  *27 -> true
+  *28 -> true
+  *140 -> false
+  *138 -> false
+  *133 -> true
+  *63 -> true
+  *39 -> false
+  *6 -> true
+  *113 -> true
+  *137 -> true
+  *116 -> true
+  *150 -> true
+  *56 -> true
+  *101 -> true
+  *88 -> true
+  *37 -> true
+  *121 -> false
+  else -> true
+}
+$as_field_with_type -> {
+  *72 *110 -> *72
+  *118 *6 -> *118
+  *232 *99 -> *232
+  *234 *140 -> *234
+  *235 *138 -> *235
+  *336 *61 -> *336
+  *337 *61 -> *337
+  *155 *61 -> *155
+  *156 *61 -> *156
+  *338 *61 -> *338
+  *215 *39 -> *215
+  else -> *72
+}
+$current_timestamp -> {
+  *11 -> 974
+  *23 -> 975
+  else -> 974
+}
+$f_timestamp -> {
+  *11 -> as-array[boogie-array#8]
+  *23 -> as-array[boogie-array#8]
+  else -> as-array[boogie-array#8]
+}
+$is_sequential_field -> {
+  *336 -> true
+  *337 -> true
+  *338 -> true
+  *72 -> true
+  *118 -> true
+  *232 -> true
+  else -> true
+}
+$is_math_type -> {
+  *94 -> true
+  *16 -> true
+  *4 -> true
+  *64 -> true
+  *31 -> true
+  *61 -> true
+  *27 -> true
+  *28 -> true
+  *133 -> true
+  *63 -> true
+  else -> true
+}
+$unchk_add -> {
+  *85 0 0 -> 0
+  *85 18446744073709558526 -18446744073709558638 -> 0
+  *85 824 0 -> 824
+  *85 2494 0 -> 2494
+  *85 361 0 -> 361
+  *85 18446744073709558685 -18446744073709567387 -> 8517
+  *85 8517 0 -> 8517
+  *85 18446744073709558808 -7191 -> 0
+  *85 18446744073709555333 11860 -> 8519
+  *85 8519 0 -> 8519
+  *85 8518 0 -> 8518
+  *85 18446744073709555326 3901 -> 8518
+  *85 18446744073709556236 -18446744073709564783 -> 5580
+  *85 5580 0 -> 5580
+  else -> 0
+}
+k!118 -> {
+  *40 -> true
+  *67 -> false
+  *158 -> false
+  *157 -> false
+  *159 -> false
+  *160 -> false
+  *161 -> false
+  *162 -> false
+  *163 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> false
+  *167 -> false
+  *168 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *172 -> false
+  *173 -> false
+  *2 -> false
+  *174 -> false
+  *175 -> false
+  *176 -> false
+  *177 -> false
+  *186 -> false
+  *178 -> false
+  *180 -> false
+  *181 -> false
+  *183 -> false
+  *179 -> false
+  *184 -> false
+  *182 -> false
+  *187 -> false
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *190 -> false
+  *191 -> false
+  *193 -> false
+  *195 -> false
+  *192 -> false
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> false
+  *199 -> false
+  *200 -> false
+  *201 -> false
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> false
+  *209 -> false
+  *210 -> false
+  *211 -> false
+  *212 -> false
+  *213 -> false
+  *214 -> false
+  else -> false
+}
+$writes_at -> {
+  974 -> as-array[boogie-array#2]
+  else -> as-array[boogie-array#2]
+}
+$file_name_is -> {
+  3 *10 -> true
+  2 *62 -> true
+  1 *43 -> true
+  else -> true
+}
+k!117 -> {
+  *40 -> true
+  *67 -> true
+  *158 -> false
+  *157 -> true
+  *159 -> true
+  *160 -> false
+  *161 -> true
+  *162 -> true
+  *163 -> false
+  *164 -> false
+  *165 -> true
+  *166 -> false
+  *167 -> true
+  *168 -> false
+  *169 -> true
+  *170 -> true
+  *171 -> false
+  *172 -> true
+  *173 -> false
+  *2 -> true
+  *174 -> true
+  *175 -> true
+  *177 -> true
+  *176 -> false
+  *178 -> false
+  *186 -> false
+  *179 -> true
+  *181 -> false
+  *182 -> false
+  *183 -> false
+  *184 -> false
+  *180 -> true
+  *187 -> true
+  *185 -> false
+  *188 -> false
+  *189 -> false
+  *191 -> true
+  *190 -> true
+  *192 -> true
+  *195 -> true
+  *193 -> true
+  *194 -> false
+  *196 -> false
+  *197 -> false
+  *198 -> true
+  *199 -> true
+  *200 -> false
+  *201 -> true
+  *202 -> false
+  *203 -> false
+  *204 -> false
+  *205 -> false
+  *206 -> false
+  *207 -> false
+  *208 -> true
+  *209 -> false
+  *210 -> true
+  *211 -> true
+  *212 -> false
+  *213 -> false
+  *214 -> true
+  else -> false
+}
+$vs_state -> {
+  *71 -> *241
+  else -> *241
+}
+$good_state_ext -> {
+  *147 *11 -> true
+  *74 *11 -> true
+  *130 *23 -> true
+  else -> true
+}
+$trans_call_transition -> {
+  *11 *11 -> true
+  *11 *23 -> true
+  else -> true
+}
+$is_claimable -> {
+  *49 -> true
+  *32 -> false
+  *140 -> false
+  *138 -> false
+  *39 -> false
+  *93 -> false
+  *139 -> false
+  *110 -> false
+  *127 -> false
+  *119 -> false
+  *41 -> false
+  *30 -> false
+  *85 -> false
+  *47 -> false
+  *81 -> false
+  *54 -> false
+  *99 -> false
+  *94 -> false
+  *16 -> false
+  *4 -> false
+  *64 -> false
+  *31 -> false
+  *61 -> false
+  *27 -> false
+  *28 -> false
+  *133 -> false
+  *63 -> false
+  *113 -> false
+  *137 -> false
+  *116 -> false
+  *150 -> false
+  *56 -> false
+  *101 -> false
+  *88 -> false
+  *37 -> false
+  *6 -> false
+  else -> false
+}
+k!114 -> {
+  *118 -> as-array[boogie-array#9]
+  else -> as-array[boogie-array#10]
+}
+$is_proper_field -> {
+  *72 -> true
+  *118 -> true
+  *234 -> true
+  *235 -> true
+  *232 -> true
+  *336 -> true
+  *337 -> true
+  *155 -> true
+  *156 -> true
+  *338 -> true
+  *215 -> true
+  else -> true
+}
+$_pow2 -> {
+  0 -> 1
+  1 -> 2
+  2 -> 4
+  3 -> 8
+  4 -> 16
+  5 -> 32
+  6 -> 64
+  7 -> 128
+  8 -> 256
+  9 -> 512
+  10 -> 1024
+  11 -> 2048
+  12 -> 4096
+  13 -> 8192
+  14 -> 16384
+  15 -> 32768
+  16 -> 65536
+  17 -> 131072
+  18 -> 262144
+  19 -> 524288
+  20 -> 1048576
+  21 -> 2097152
+  22 -> 4194304
+  23 -> 8388608
+  24 -> 16777216
+  25 -> 33554432
+  26 -> 67108864
+  27 -> 134217728
+  28 -> 268435456
+  29 -> 536870912
+  30 -> 1073741824
+  31 -> 2147483648
+  32 -> 4294967296
+  33 -> 8589934592
+  34 -> 17179869184
+  35 -> 34359738368
+  36 -> 68719476736
+  37 -> 137438953472
+  38 -> 274877906944
+  39 -> 549755813888
+  40 -> 1099511627776
+  41 -> 2199023255552
+  42 -> 4398046511104
+  43 -> 8796093022208
+  44 -> 17592186044416
+  45 -> 35184372088832
+  46 -> 70368744177664
+  47 -> 140737488355328
+  48 -> 281474976710656
+  49 -> 562949953421312
+  50 -> 1125899906842624
+  51 -> 2251799813685248
+  52 -> 4503599627370496
+  53 -> 9007199254740992
+  54 -> 18014398509481984
+  55 -> 36028797018963968
+  56 -> 72057594037927936
+  57 -> 144115188075855872
+  58 -> 288230376151711744
+  59 -> 576460752303423488
+  60 -> 1152921504606846976
+  61 -> 2305843009213693952
+  62 -> 4611686018427387904
+  63 -> 9223372036854775808
+  64 -> 18446744073709551616
+  else -> 1
+}
+$roots -> {
+  *11 -> as-array[boogie-array#11]
+  *23 -> as-array[boogie-array#11]
+  else -> as-array[boogie-array#11]
+}
+k!113 -> {
+  else -> *418
+}
+$set_cardinality -> {
+  as-array[boogie-array#2] -> 0
+  else -> 0
+}
+tickleBool -> {
+  true -> true
+  false -> true
+  else -> true
+}
+$field_kind -> {
+  *72 -> *84
+  *118 -> *84
+  *232 -> *111
+  *234 -> *111
+  *235 -> *111
+  *336 -> *7
+  *337 -> *7
+  *155 -> *7
+  *156 -> *7
+  *338 -> *7
+  *215 -> *111
+  else -> *7
+}
+$as_composite_field -> {
+  *234 -> *234
+  *235 -> *235
+  *215 -> *215
+  else -> *234
+}
+$phys_ptr_cast -> {
+  *26 *39 -> *2
+  *24 *39 -> *40
+  *2 *39 -> *2
+  *40 *39 -> *40
+  *227 *39 -> *67
+  *225 *39 -> *197
+  *197 *39 -> *197
+  *67 *39 -> *67
+  *230 *39 -> *180
+  *180 *39 -> *180
+  else -> *2
+}
+$full_stop -> {
+  *11 -> true
+  *23 -> true
+  else -> true
+}
+$thread_local -> {
+  *11 *2 -> true
+  else -> true
+}
+$invok_state -> {
+  *11 -> true
+  *23 -> true
+  else -> true
+}
+$f_closed -> {
+  *11 -> as-array[boogie-array#12]
+  *23 -> as-array[boogie-array#12]
+  else -> as-array[boogie-array#12]
+}
+k!111 -> {
+  else -> false
+}
+$field -> {
+  *53 -> *234
+  *58 -> *235
+  *13 -> *234
+  *123 -> *233
+  *109 -> *232
+  *2 -> *215
+  *40 -> *215
+  *197 -> *215
+  *67 -> *215
+  *26 -> *236
+  *24 -> *237
+  *225 -> *238
+  *227 -> *239
+  *180 -> *215
+  *230 -> *240
+  else -> *215
+}
+distinct-aux-f!!58 -> {
+  *121 -> *19
+  *93 -> *69
+  *139 -> *79
+  *110 -> *97
+  *127 -> *59
+  *119 -> *135
+  *41 -> *80
+  *30 -> *68
+  *85 -> *25
+  *99 -> *112
+  *54 -> *136
+  *47 -> *100
+  *81 -> *122
+  *94 -> *35
+  *16 -> *142
+  *4 -> *60
+  *49 -> *36
+  *64 -> *131
+  *31 -> *105
+  *61 -> *149
+  *27 -> *12
+  *32 -> *73
+  *28 -> *3
+  *29 -> *89
+  *144 -> *132
+  *140 -> *76
+  *138 -> *44
+  *148 -> *145
+  *124 -> *82
+  *133 -> *75
+  *63 -> *83
+  *39 -> *38
+  *113 -> *141
+  *137 -> *48
+  *116 -> *98
+  *150 -> *146
+  *56 -> *45
+  *101 -> *128
+  *88 -> *151
+  *37 -> *65
+  *6 -> *91
+  else -> *19
+}
+F#sll -> {
+  *11 *2 -> true
+  *11 *40 -> true
+  *11 *67 -> true
+  *23 *67 -> false
+  *23 *180 -> false
+  *23 *2 -> false
+  else -> true
+}
+F#sll_lseg_reach -> {
+  *11 *2 *40 -> as-array[boogie-array#0]
+  *11 *40 *2 -> as-array[boogie-array#1]
+  *11 *67 *40 -> as-array[boogie-array#4]
+  *23 *2 *2 -> as-array[boogie-array#1]
+  *23 *67 *67 -> as-array[boogie-array#1]
+  else -> as-array[boogie-array#1]
+}
+$instantiate_int -> {
+  104 -> true
+  101 -> true
+  99 -> true
+  else -> true
+}
+k!112 -> {
+  else -> *419
+}
+$f_owns -> {
+  *49 -> *336
+  *32 -> *337
+  *140 -> *155
+  *138 -> *156
+  *39 -> *338
+  else -> *336
+}
+$field_type -> {
+  *233 -> *49
+  *72 -> *110
+  *118 -> *6
+  *234 -> *140
+  *235 -> *138
+  *232 -> *99
+  *336 -> *61
+  *337 -> *61
+  *155 -> *61
+  *156 -> *61
+  *338 -> *61
+  *215 -> *39
+  else -> *61
+}
+$has_field_at0 -> {
+  *39 *72 -> true
+  else -> true
+}
+$type_project_0 -> {
+  *6 -> *39
+  else -> *39
+}
+$type_branch -> {
+  *93 -> *20
+  *139 -> *20
+  *110 -> *20
+  *127 -> *20
+  *119 -> *20
+  *41 -> *20
+  *30 -> *20
+  *85 -> *20
+  *47 -> *20
+  *81 -> *20
+  *54 -> *20
+  *99 -> *20
+  *94 -> *20
+  *16 -> *20
+  *4 -> *20
+  *49 -> *20
+  *32 -> *20
+  *64 -> *20
+  *31 -> *20
+  *61 -> *20
+  *27 -> *20
+  *28 -> *20
+  *140 -> *20
+  *138 -> *20
+  *133 -> *20
+  *63 -> *20
+  *39 -> *20
+  *113 -> *20
+  *137 -> *20
+  *116 -> *20
+  *150 -> *20
+  *56 -> *20
+  *101 -> *20
+  *88 -> *20
+  *37 -> *20
+  *6 -> *87
+  else -> *20
+}
+$in_range_t -> {
+  *30 4294967296 -> false
+  *30 0 -> true
+  *85 18446744073709551616 -> false
+  *85 0 -> true
+  *30 -1 -> false
+  *30 4294967295 -> true
+  *85 -1 -> false
+  *85 18446744073709551615 -> true
+  *85 -112 -> false
+  *85 824 -> true
+  *85 2494 -> true
+  *85 361 -> true
+  *85 -8702 -> false
+  *85 8517 -> true
+  *85 18446744073709551617 -> false
+  *85 18446744073709567193 -> false
+  *85 8519 -> true
+  *85 8518 -> true
+  *85 -8547 -> false
+  *85 18446744073709559227 -> false
+  *85 5580 -> true
+  else -> true
+}
+$spec_ptr_cast -> {
+  *53 *140 -> *53
+  *58 *138 -> *58
+  *13 *140 -> *13
+  else -> *53
+}
+k!107 -> {
+  *118 -> as-array[boogie-array#13]
+  else -> as-array[boogie-array#10]
+}
+k!109 -> {
+  *185 -> false
+  *40 -> true
+  *67 -> false
+  *184 -> true
+  *187 -> false
+  *183 -> true
+  *188 -> true
+  *189 -> true
+  *161 -> false
+  *160 -> true
+  *181 -> false
+  *158 -> false
+  *194 -> false
+  *164 -> false
+  *165 -> false
+  *166 -> true
+  *196 -> true
+  *197 -> true
+  *167 -> false
+  *168 -> false
+  *163 -> false
+  *169 -> false
+  *170 -> false
+  *171 -> false
+  *200 -> true
+  *204 -> true
+  *173 -> true
+  *202 -> false
+  *2 -> false
+  *206 -> true
+  *203 -> false
+  *207 -> false
+  *205 -> false
+  *209 -> true
+  *211 -> false
+  *212 -> true
+  *177 -> false
+  *176 -> false
+  *213 -> true
+  *178 -> true
+  *186 -> true
+  *182 -> true
+  else -> false
+}
+$is_union_type -> {
+  *39 -> false
+  else -> false
+}
+$sizeof -> {
+  *93 -> 1
+  *139 -> 2
+  *110 -> 4
+  *127 -> 8
+  *119 -> 1
+  *41 -> 2
+  *30 -> 4
+  *85 -> 8
+  *47 -> 4
+  *81 -> 8
+  *54 -> 1
+  *99 -> 1
+  *94 -> 1
+  *16 -> 1
+  *4 -> 1
+  *49 -> 1
+  *32 -> 1
+  *64 -> 1
+  *31 -> 1
+  *61 -> 1
+  *27 -> 1
+  *28 -> 1
+  *140 -> 1
+  *138 -> 1
+  *133 -> 1
+  *63 -> 1
+  *39 -> 16
+  *113 -> 8
+  *137 -> 8
+  *116 -> 8
+  *150 -> 8
+  *56 -> 8
+  *101 -> 8
+  *88 -> 8
+  *37 -> 8
+  *6 -> 8
+  else -> 1
+}
+$field_parent_type -> {
+  *72 -> *39
+  *118 -> *39
+  *234 -> *140
+  *235 -> *138
+  *232 -> *121
+  *336 -> *49
+  *337 -> *32
+  *155 -> *140
+  *156 -> *138
+  *338 -> *39
+  *215 -> *39
+  else -> *39
+}
+$in_range_spec_ptr -> {
+  *53 -> true
+  *58 -> true
+  *13 -> true
+  else -> true
+}
+$is_fnptr_type -> {
+  *113 -> true
+  *137 -> true
+  *116 -> true
+  *150 -> true
+  *56 -> true
+  *101 -> true
+  *88 -> true
+  *37 -> true
+  else -> true
+}
+$f_root -> {
+  *99 -> *232
+  *140 -> *234
+  *138 -> *235
+  *39 -> *215
+  else -> *232
+}
+$is_ghost_field -> {
+  *336 -> true
+  *337 -> true
+  *155 -> true
+  *156 -> true
+  *338 -> true
+  else -> true
+}
+F#sll_lseg -> {
+  *11 *2 *40 -> true
+  *11 *67 *40 -> true
+  *23 *67 *67 -> true
+  *23 *2 *2 -> true
+  else -> true
+}
+$function_entry -> {
+  *11 -> true
+  else -> true
+}
+$heap -> {
+  *11 -> as-array[boogie-array#14]
+  *23 -> as-array[boogie-array#15]
+  else -> as-array[boogie-array#14]
+}
+$is_span_sequential -> {
+  *39 -> true
+  else -> true
+}
+$ptr_eq -> {
+  *2 *40 -> false
+  else -> false
+}
+$f_owner -> {
+  *11 -> as-array[boogie-array#16]
+  *23 -> as-array[boogie-array#16]
+  else -> as-array[boogie-array#16]
+}
+$int_to_ptr -> {
+  101 -> *227
+  100 -> *2
+  104 -> *225
+  99 -> *230
+  else -> *227
+}
+$set_in_pos -> {
+  *40 as-array[boogie-array#17] -> true
+  *2 as-array[boogie-array#0] -> true
+  *67 as-array[boogie-array#6] -> true
+  *2 as-array[boogie-array#5] -> true
+  *40 as-array[boogie-array#18] -> true
+  *40 as-array[boogie-array#19] -> true
+  *2 as-array[boogie-array#20] -> true
+  *67 as-array[boogie-array#21] -> true
+  *67 as-array[boogie-array#4] -> true
+  *40 as-array[boogie-array#4] -> true
+  *40 as-array[boogie-array#0] -> true
+  *180 as-array[boogie-array#7] -> true
+  *197 as-array[boogie-array#3] -> true
+  *67 as-array[boogie-array#0] -> true
+  *67 as-array[boogie-array#5] -> true
+  *180 as-array[boogie-array#6] -> true
+  *190 as-array[boogie-array#5] -> true
+  *176 as-array[boogie-array#4] -> true
+  *181 as-array[boogie-array#0] -> true
+  *188 as-array[boogie-array#3] -> true
+  *178 as-array[boogie-array#17] -> true
+  *168 as-array[boogie-array#4] -> true
+  *193 as-array[boogie-array#7] -> true
+  *199 as-array[boogie-array#6] -> true
+  *179 as-array[boogie-array#5] -> true
+  *214 as-array[boogie-array#18] -> true
+  *200 as-array[boogie-array#22] -> true
+  *200 as-array[boogie-array#0] -> true
+  *200 as-array[boogie-array#3] -> true
+  *200 as-array[boogie-array#4] -> true
+  *173 as-array[boogie-array#3] -> true
+  *182 as-array[boogie-array#17] -> true
+  *207 as-array[boogie-array#0] -> true
+  *159 as-array[boogie-array#6] -> true
+  *202 as-array[boogie-array#0] -> true
+  *164 as-array[boogie-array#0] -> true
+  *194 as-array[boogie-array#0] -> true
+  *158 as-array[boogie-array#0] -> true
+  *203 as-array[boogie-array#0] -> true
+  *213 as-array[boogie-array#3] -> true
+  *167 as-array[boogie-array#7] -> true
+  *170 as-array[boogie-array#6] -> true
+  *184 as-array[boogie-array#3] -> true
+  *165 as-array[boogie-array#18] -> true
+  *212 as-array[boogie-array#3] -> true
+  *166 as-array[boogie-array#17] -> true
+  *187 as-array[boogie-array#7] -> true
+  *183 as-array[boogie-array#17] -> true
+  *189 as-array[boogie-array#17] -> true
+  *186 as-array[boogie-array#17] -> true
+  *209 as-array[boogie-array#17] -> true
+  *206 as-array[boogie-array#17] -> true
+  *196 as-array[boogie-array#17] -> true
+  *162 as-array[boogie-array#7] -> true
+  *174 as-array[boogie-array#5] -> true
+  *198 as-array[boogie-array#18] -> true
+  *163 as-array[boogie-array#4] -> true
+  *185 as-array[boogie-array#4] -> true
+  *205 as-array[boogie-array#4] -> true
+  *171 as-array[boogie-array#4] -> true
+  *67 as-array[boogie-array#18] -> true
+  *210 as-array[boogie-array#7] -> true
+  *211 as-array[boogie-array#7] -> true
+  *201 as-array[boogie-array#7] -> true
+  *157 as-array[boogie-array#7] -> true
+  *2 as-array[boogie-array#18] -> true
+  *169 as-array[boogie-array#6] -> true
+  *172 as-array[boogie-array#6] -> true
+  *161 as-array[boogie-array#5] -> true
+  *192 as-array[boogie-array#5] -> true
+  *208 as-array[boogie-array#5] -> true
+  *195 as-array[boogie-array#18] -> true
+  *177 as-array[boogie-array#18] -> true
+  *191 as-array[boogie-array#18] -> true
+  *175 as-array[boogie-array#18] -> true
+  *160 as-array[boogie-array#22] -> true
+  *204 as-array[boogie-array#22] -> true
+  *190 as-array[boogie-array#6] -> true
+  *181 as-array[boogie-array#4] -> true
+  *178 as-array[boogie-array#3] -> true
+  *199 as-array[boogie-array#7] -> true
+  *179 as-array[boogie-array#6] -> true
+  *214 as-array[boogie-array#5] -> true
+  *182 as-array[boogie-array#3] -> true
+  *207 as-array[boogie-array#4] -> true
+  *159 as-array[boogie-array#7] -> true
+  *202 as-array[boogie-array#4] -> true
+  *164 as-array[boogie-array#4] -> true
+  *194 as-array[boogie-array#4] -> true
+  *158 as-array[boogie-array#4] -> true
+  *203 as-array[boogie-array#4] -> true
+  *170 as-array[boogie-array#7] -> true
+  *165 as-array[boogie-array#5] -> true
+  *166 as-array[boogie-array#3] -> true
+  *183 as-array[boogie-array#3] -> true
+  *189 as-array[boogie-array#3] -> true
+  *186 as-array[boogie-array#3] -> true
+  *209 as-array[boogie-array#3] -> true
+  *206 as-array[boogie-array#3] -> true
+  *196 as-array[boogie-array#3] -> true
+  *174 as-array[boogie-array#6] -> true
+  *198 as-array[boogie-array#5] -> true
+  *169 as-array[boogie-array#7] -> true
+  *172 as-array[boogie-array#7] -> true
+  *161 as-array[boogie-array#6] -> true
+  *192 as-array[boogie-array#6] -> true
+  *208 as-array[boogie-array#6] -> true
+  *208 as-array[boogie-array#7] -> true
+  *195 as-array[boogie-array#5] -> true
+  *177 as-array[boogie-array#5] -> true
+  *191 as-array[boogie-array#5] -> true
+  *191 as-array[boogie-array#6] -> true
+  *175 as-array[boogie-array#5] -> true
+  *160 as-array[boogie-array#0] -> true
+  *160 as-array[boogie-array#3] -> true
+  *160 as-array[boogie-array#4] -> true
+  *204 as-array[boogie-array#0] -> true
+  *204 as-array[boogie-array#3] -> true
+  *204 as-array[boogie-array#4] -> true
+  *190 as-array[boogie-array#7] -> true
+  *179 as-array[boogie-array#7] -> true
+  *214 as-array[boogie-array#6] -> true
+  *165 as-array[boogie-array#6] -> true
+  *174 as-array[boogie-array#7] -> true
+  *198 as-array[boogie-array#6] -> true
+  *161 as-array[boogie-array#7] -> true
+  *192 as-array[boogie-array#7] -> true
+  *195 as-array[boogie-array#6] -> true
+  *177 as-array[boogie-array#6] -> true
+  *191 as-array[boogie-array#7] -> true
+  *175 as-array[boogie-array#6] -> true
+  *175 as-array[boogie-array#7] -> true
+  *214 as-array[boogie-array#7] -> true
+  *165 as-array[boogie-array#7] -> true
+  *198 as-array[boogie-array#7] -> true
+  *195 as-array[boogie-array#7] -> true
+  *177 as-array[boogie-array#7] -> true
+  *180 as-array[boogie-array#5] -> true
+  *193 as-array[boogie-array#5] -> true
+  *199 as-array[boogie-array#5] -> true
+  *159 as-array[boogie-array#5] -> true
+  *162 as-array[boogie-array#5] -> true
+  *210 as-array[boogie-array#5] -> true
+  *201 as-array[boogie-array#5] -> true
+  *157 as-array[boogie-array#5] -> true
+  *172 as-array[boogie-array#5] -> true
+  *193 as-array[boogie-array#6] -> true
+  *162 as-array[boogie-array#6] -> true
+  *210 as-array[boogie-array#6] -> true
+  *201 as-array[boogie-array#6] -> true
+  *157 as-array[boogie-array#6] -> true
+  *168 as-array[boogie-array#0] -> true
+  *176 as-array[boogie-array#0] -> true
+  *163 as-array[boogie-array#0] -> true
+  *205 as-array[boogie-array#0] -> true
+  *171 as-array[boogie-array#0] -> true
+  *200 as-array[boogie-array#17] -> true
+  *212 as-array[boogie-array#17] -> true
+  *190 as-array[boogie-array#18] -> true
+  *173 as-array[boogie-array#17] -> true
+  *213 as-array[boogie-array#17] -> true
+  *174 as-array[boogie-array#18] -> true
+  *160 as-array[boogie-array#17] -> true
+  *204 as-array[boogie-array#17] -> true
+  *179 as-array[boogie-array#18] -> true
+  *188 as-array[boogie-array#17] -> true
+  *184 as-array[boogie-array#17] -> true
+  *192 as-array[boogie-array#18] -> true
+  *208 as-array[boogie-array#18] -> true
+  *167 as-array[boogie-array#6] -> true
+  *187 as-array[boogie-array#6] -> true
+  *211 as-array[boogie-array#6] -> true
+  *170 as-array[boogie-array#5] -> true
+  *169 as-array[boogie-array#5] -> true
+  *197 as-array[boogie-array#17] -> true
+  *161 as-array[boogie-array#18] -> true
+  *185 as-array[boogie-array#0] -> true
+  *167 as-array[boogie-array#5] -> true
+  *187 as-array[boogie-array#5] -> true
+  *211 as-array[boogie-array#5] -> true
+  *180 as-array[boogie-array#18] -> true
+  *193 as-array[boogie-array#18] -> true
+  *199 as-array[boogie-array#18] -> true
+  *159 as-array[boogie-array#18] -> true
+  *162 as-array[boogie-array#18] -> true
+  *210 as-array[boogie-array#18] -> true
+  *201 as-array[boogie-array#18] -> true
+  *157 as-array[boogie-array#18] -> true
+  *172 as-array[boogie-array#18] -> true
+  *170 as-array[boogie-array#18] -> true
+  *169 as-array[boogie-array#18] -> true
+  *167 as-array[boogie-array#18] -> true
+  *187 as-array[boogie-array#18] -> true
+  *211 as-array[boogie-array#18] -> true
+  else -> true
+}
+$field_offset -> {
+  *72 -> 0
+  *118 -> 8
+  *233 -> -18446744073709558638
+  *234 -> 0
+  *235 -> 0
+  *232 -> 0
+  *236 -> -18446744073709567387
+  *237 -> -7191
+  *238 -> 11860
+  *239 -> 3901
+  *215 -> 0
+  *240 -> -18446744073709564783
+  else -> 0
+}
+$as_in_range_t -> {
+  *93 -> *93
+  *139 -> *139
+  *110 -> *110
+  *127 -> *127
+  *119 -> *119
+  *41 -> *41
+  *30 -> *30
+  *85 -> *85
+  *31 -> *31
+  else -> *93
+}
+$field_arr_root -> {
+  *72 -> *72
+  *118 -> *118
+  *232 -> *232
+  *234 -> *234
+  *235 -> *235
+  *336 -> *336
+  *337 -> *337
+  *155 -> *155
+  *156 -> *156
+  *338 -> *338
+  *215 -> *215
+  else -> *72
+}
+*** STATE <initial>
+  $s -> *11
+  $cev_pc -> **$cev_pc
+  P#h -> *26
+  P#j -> *24
+  stmtexpr1#6 -> **stmtexpr1#6
+  SL#_dryad_S1 -> **SL#_dryad_S1
+  stmtexpr0#5 -> **stmtexpr0#5
+  SL#_dryad_S0 -> **SL#_dryad_S0
+  L#k -> **L#k
+  ite#1 -> **ite#1
+  stmtexpr1#8 -> **stmtexpr1#8
+  stmtexpr0#7 -> **stmtexpr0#7
+  res_sll_lseg_reach#4 -> **res_sll_lseg_reach#4
+  res_sll_reach#3 -> **res_sll_reach#3
+  res_sll_reach#2 -> **res_sll_reach#2
+  SL#_dryad_G1 -> **SL#_dryad_G1
+  SL#_dryad_G0 -> **SL#_dryad_G0
+  local.j -> **local.j
+  local.h -> **local.h
+  #wrTime$2^3.3 -> 974
+  #stackframe -> **#stackframe
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(3,3) : function entry
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  local.h -> *2
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  local.j -> *40
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  res_sll_reach#2 -> as-array[boogie-array#0]
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  res_sll_reach#3 -> as-array[boogie-array#1]
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  res_sll_lseg_reach#4 -> as-array[boogie-array#0]
+*** END_STATE
+*** STATE <no file>(0,0)
+  SL#_dryad_G0 -> as-array[boogie-array#0]
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  stmtexpr0#7 -> as-array[boogie-array#0]
+*** END_STATE
+*** STATE <no file>(0,0)
+  SL#_dryad_G1 -> as-array[boogie-array#0]
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  stmtexpr1#8 -> as-array[boogie-array#0]
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(14,7)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(14,7)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(14,3)
+  ite#1 -> true
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(15,5)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(15,16)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(15,5)
+*** END_STATE
+*** STATE <no file>(0,0)
+  L#k -> *67
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  SL#_dryad_S0 -> *11
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(17,5)
+  stmtexpr0#5 -> *11
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(17,5)
+*** END_STATE
+*** STATE <no file>(0,0)
+  $s -> *23
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  SL#_dryad_S1 -> *23
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+  stmtexpr1#6 -> *23
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(18,5)
+*** END_STATE
+*** STATE <no file>(0,0)
+  local.j -> *2
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(19,5)
+*** END_STATE
+*** STATE <no file>(0,0)
+  local.h -> *67
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE <no file>(0,0)
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(22,1)
+  $s -> *23
+  stmtexpr1#6 -> *23
+  SL#_dryad_S1 -> *23
+  stmtexpr0#5 -> *11
+  SL#_dryad_S0 -> *11
+  L#k -> *67
+  local.j -> *2
+  local.h -> *67
+*** END_STATE
+*** STATE C:\Users\eddie\vcc2_3-src\vcc\Host\bin\Debug\afwp\buggy-SLL-rotate.c(22,1) : function exit
+*** END_STATE
+*** END_MODEL

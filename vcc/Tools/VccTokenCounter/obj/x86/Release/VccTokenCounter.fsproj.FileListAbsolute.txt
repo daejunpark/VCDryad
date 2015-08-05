@@ -1,0 +1,7 @@
+C:\Users\eddie\vcc2_3-src\vcc\Tools\VccTokenCounter\bin\Release\VccTokenCounter.exe.config
+C:\Users\eddie\vcc2_3-src\vcc\Tools\VccTokenCounter\bin\Release\VccTokenCounter.XML
+C:\Users\eddie\vcc2_3-src\vcc\Tools\VccTokenCounter\bin\Release\VccTokenCounter.exe
+C:\Users\eddie\vcc2_3-src\vcc\Tools\VccTokenCounter\bin\Release\VccTokenCounter.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Tools\VccTokenCounter\obj\x86\Release\VccTokenCounter.exe
+C:\Users\eddie\vcc2_3-src\vcc\Tools\VccTokenCounter\obj\x86\Release\VccTokenCounter.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Tools\VccTokenCounter\obj\x86\Release\VccTokenCounter.fsprojResolveAssemblyReference.cache

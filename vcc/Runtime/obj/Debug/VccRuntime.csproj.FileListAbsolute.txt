@@ -1,0 +1,9 @@
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\bin\Debug\Microsoft.Research.Vcc.Runtime.dll
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\bin\Debug\Microsoft.Research.Vcc.Runtime.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\obj\Debug\Microsoft.Research.Vcc.Runtime.dll
+C:\Users\eddie\vcc2_3-src\vcc\Runtime\obj\Debug\Microsoft.Research.Vcc.Runtime.pdb
+C:\Users\Edgar\Repos\research\VCDryad-src\VCDryad-src\vcc\Runtime\bin\Debug\Microsoft.Research.Vcc.Runtime.dll
+C:\Users\Edgar\Repos\research\VCDryad-src\VCDryad-src\vcc\Runtime\bin\Debug\Microsoft.Research.Vcc.Runtime.pdb
+C:\Users\Edgar\Repos\research\VCDryad-src\VCDryad-src\vcc\Runtime\obj\Debug\Microsoft.Research.Vcc.Runtime.dll
+C:\Users\Edgar\Repos\research\VCDryad-src\VCDryad-src\vcc\Runtime\obj\Debug\Microsoft.Research.Vcc.Runtime.pdb
+C:\Users\Edgar\Repos\research\VCDryad-src\VCDryad-src\vcc\Runtime\obj\Debug\VccRuntime.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+C:\Users\eddie\vcc2_3-src\vcc\Transformers\bin\Release\Transformers.XML
+C:\Users\eddie\vcc2_3-src\vcc\Transformers\bin\Release\Microsoft.Research.Vcc.Transformers.dll
+C:\Users\eddie\vcc2_3-src\vcc\Transformers\bin\Release\Microsoft.Research.Vcc.Transformers.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Transformers\bin\Release\Microsoft.Research.Vcc.Ast.dll
+C:\Users\eddie\vcc2_3-src\vcc\Transformers\bin\Release\Microsoft.Research.Vcc.Ast.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Transformers\obj\Release\Microsoft.Research.Vcc.Transformers.dll
+C:\Users\eddie\vcc2_3-src\vcc\Transformers\obj\Release\Microsoft.Research.Vcc.Transformers.pdb
+C:\Users\eddie\vcc2_3-src\vcc\Transformers\obj\Release\Transformers.fsprojResolveAssemblyReference.cache
