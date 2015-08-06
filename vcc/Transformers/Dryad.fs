@@ -1549,8 +1549,8 @@ namespace Microsoft.Research.Vcc
                     let unionNewLoc = Expr.Call( { bogusEC with Type = Type.OSet },  dryadFunDict.["\oset_union"], [], [globSetPreRef; singleLoc])
                     let addGlobalLoc = Expr.SpecCode(Expr.Macro(bogusEC, "=", [globSetPostRef; unionNewLoc]))
                     let globReachCall = Expr.Call( { bogusEC with Type = Type.OSet }, dryadFunDict.["glob_reach"], [], [])
-                    let equivPostStmt = Expr.MkAssume(mkEq globReachCall globSetPostRef)
-                    Some(Expr.MkBlock([ mexp; newNotInGlobal; addGlobalLoc; equivPostStmt ]))
+                    //let equivPostStmt = Expr.MkAssume(mkEq globReachCall globSetPostRef)
+                    Some(Expr.MkBlock([ mexp; newNotInGlobal; addGlobalLoc ]))
                 | _ -> None
             | _ -> None
               
