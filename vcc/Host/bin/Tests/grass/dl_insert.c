@@ -32,7 +32,7 @@ DLNode * dl_insert(DLNode * lst, DLNode * elt)
     DLNode * curr_next = curr->next;
     elt->next = curr_next;
     if (curr_next != NULL) {
-      curr_next->prev = NULL;
+      curr_next->prev = elt;
     }
     curr->next = elt;
     elt->prev = curr;
