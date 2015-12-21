@@ -1,0 +1,11 @@
+invariant b0000 ==> (F#slave_dll($s,$phys_ptr_cast(L#dll,^slave_item)));
+invariant b0001 ==> ($non_null($phys_ptr_cast(L#dll,^slave_item)));
+invariant b0002 ==> ($is_null($phys_ptr_cast(L#dll,^slave_item)));
+invariant b0003 ==> (($non_null($phys_ptr_cast(L#dll,^slave_item)) ==> $non_null($rd_phys_ptr($s,slave_item.next,$phys_ptr_cast(L#dll,^slave_item),^slave_item))));
+invariant b0004 ==> (($non_null($phys_ptr_cast(L#dll,^slave_item)) ==> $is_null($rd_phys_ptr($s,slave_item.next,$phys_ptr_cast(L#dll,^slave_item),^slave_item))));
+INV
+const {:existential true} b0000 : bool;
+const {:existential true} b0001 : bool;
+const {:existential true} b0002 : bool;
+const {:existential true} b0003 : bool;
+const {:existential true} b0004 : bool;
