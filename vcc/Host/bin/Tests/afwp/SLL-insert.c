@@ -10,25 +10,33 @@ Node * SLL_insert(Node * h, int v)
   _(assume mutable_list(h))
   Node * i = h;
   Node * j = NULL;
-  while(i != NULL && i->key <= v) 
-    _(invariant srtl(h))
-    _(invariant srtl(i))
-    _(invariant srtl_lseg(h, i))
-    _(invariant \oset_disjoint(srtl_lseg_reach(h, i), srtl_reach(i)))
-    _(invariant srtl(j))
-    _(invariant j == NULL ==> i == h)
-    _(invariant j != NULL ==> srtl_lseg(h, j))
-    _(invariant j != NULL ==> \oset_disjoint(srtl_lseg_reach(h, j), srtl_reach(j)))
-    _(invariant j != NULL ==> j->next == i)
-    _(invariant j != NULL ==> j->key <= v)
-    _(invariant \oset_subset(srtl_reach(i), ALL_REACH))
-    _(invariant \oset_subset(srtl_reach(j), ALL_REACH))
-    _(invariant \oset_subset(srtl_lseg_reach(h, i), ALL_REACH))
-    _(invariant \oset_subset(srtl_lseg_reach(h, j), ALL_REACH))
+
+  if(i != NULL && i->key <= v) 
   {
     j = i;
     i = i->next;
+
+      while(i != NULL && i->key <= v) 
+        _(invariant srtl(h))
+        _(invariant srtl(i))
+        _(invariant srtl_lseg(h, i))
+        _(invariant \oset_disjoint(srtl_lseg_reach(h, i), srtl_reach(i)))
+        _(invariant srtl(j))
+        _(invariant j == NULL ==> i == h)
+        _(invariant j != NULL ==> srtl_lseg(h, j))
+        _(invariant j != NULL ==> \oset_disjoint(srtl_lseg_reach(h, j), srtl_reach(j)))
+        _(invariant j != NULL ==> j->next == i)
+        _(invariant j != NULL ==> j->key <= v)
+        _(invariant \oset_subset(srtl_reach(i), ALL_REACH))
+        _(invariant \oset_subset(srtl_reach(j), ALL_REACH))
+        _(invariant \oset_subset(srtl_lseg_reach(h, i), ALL_REACH))
+        _(invariant \oset_subset(srtl_lseg_reach(h, j), ALL_REACH))
+      {
+        j = i;
+        i = i->next;
+      }
   }
+
   if (i == h) {
     Node * hd = (Node *)malloc(sizeof(Node));
     _(assume hd != NULL)
