@@ -36,6 +36,7 @@ DLNode * dl_filter(DLNode * x)
         }
       } else {
         res = old_curr->next;
+        if (res != NULL) res->prev = NULL;
       }
       free(old_curr);
     } else {
