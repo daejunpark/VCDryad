@@ -1,0 +1,11 @@
+./afwp/SLL-create.c
+./afwp/SLL-delete-all.c
+./afwp/SLL-find.c
+./afwp/SLL-last.c
+./afwp/SLL-reverse.c
+./grass/sl_concat.c
+./grass/sl_copy.c
+./grass/sl_dispose.c
+./grass/sl_insert.c
+./grass/sl_reverse.c
+./grass/sl_traverse.c
