@@ -1,0 +1,17 @@
+list(x)
+lseg(x,y)
+
+disjoint(reach(x),reach(y))
+disjoint(reach(x,y),reach(y))
+disjoint(reach(x,y),reach(z))
+
+disjoint(singleton(x),reach(y))
+disjoint(singleton(x),reach(y,z))
+
+x != null
+x == null
+x == y
+
+x->next != null
+x->next == null
+x->next == y
