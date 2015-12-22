@@ -12,7 +12,7 @@ void dl_dispose(DLNode * a, DLNode * b _(out \oset ALL_REACH))
 {
   _(assume mutable_list(a))
   _(assume a != NULL ==> \malloc_root(a))
-  _(ghost ALL_REACH = \oset_union(dll_reach(a), dll_reach(b)) ;)
+  _(ghost ALL_REACH = dll_reach(a) ;) // \oset_union(dll_reach(a), dll_reach(b)) ;)
 
   DLNode * prv = NULL;
   while(a != NULL) 
