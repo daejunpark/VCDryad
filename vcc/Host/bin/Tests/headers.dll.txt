@@ -1,0 +1,40 @@
+dll
+dll_reach
+dll_keys
+dll_mkeys
+dll_list_len_next
+
+dll_lseg
+dll_lseg_reach
+dll_lseg_keys
+dll_lseg_mkeys
+dll_lseg_len_next
+
+
+./afwp/dryad_DLL.h
+./afwp/DLL-fix.c: "dryad_DLL.h"
+
+./grass/dryad_dl.h
+./grass/dl_concat.c: "dryad_dl.h"
+./grass/dl_copy.c: "dryad_dl.h"
+./grass/dl_dispose.c: "dryad_dl.h"
+./grass/dl_filter.c: "dryad_dl.h"
+./grass/dl_insert.c: "dryad_dl.h"
+./grass/dl_remove.c: "dryad_dl.h"
+./grass/dl_reverse.c: "dryad_dl.h"
+./grass/dl_traverse.c: "dryad_dl.h"
+
+./glist/dryad_dll_lseg_defs.h
+./glist/g_list_find.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_free.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_index.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_last.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_length.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_nth.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_nth_data.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_position.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_prepend.c: "dryad_dll_lseg_defs.h"
+./glist/g_list_reverse.c: "dryad_dll_lseg_defs.h"
+
+./sv-comp/dryad_slave_dll.h
+./sv-comp/dll_of_dll.c: "dryad_slave_dll.h"

@@ -1,0 +1,47 @@
+sll
+sll_reach
+sll_keys
+sll_mkeys
+sll_list_len_next
+
+sll_lseg
+sll_lseg_reach
+sll_lseg_keys
+sll_lseg_mkeys
+sll_lseg_len_next
+
+
+./afwp/dryad_SLL.h
+./afwp/DLL-fix.c: "dryad_SLL.h"
+./afwp/SLL-create.c: "dryad_SLL.h"
+./afwp/SLL-delete-all.c: "dryad_SLL.h"
+./afwp/SLL-delete.c: "dryad_SLL.h"
+./afwp/SLL-filter.c: "dryad_SLL.h"
+./afwp/SLL-find.c: "dryad_SLL.h"
+./afwp/SLL-last.c: "dryad_SLL.h"
+./afwp/SLL-reverse.c: "dryad_SLL.h"
+./afwp/SLL-rotate.c: "dryad_SLL.h"
+./afwp/SLL-swap.c: "dryad_SLL.h"
+
+./grass/dryad_sl.h
+./grass/sl_concat.c: "dryad_sl.h"
+./grass/sl_copy.c: "dryad_sl.h"
+./grass/sl_dispose.c: "dryad_sl.h"
+./grass/sl_filter.c: "dryad_sl.h"
+./grass/sl_insert.c: "dryad_sl.h"
+./grass/sl_remove.c: "dryad_sl.h"
+./grass/sl_reverse.c: "dryad_sl.h"
+./grass/sl_traverse.c: "dryad_sl.h"
+
+./gslist/dryad_gslist_sll.h
+./gslist/g_slist_copy.c: "dryad_gslist_sll.h"
+./gslist/g_slist_delete_link.c: "dryad_gslist_sll.h"
+./gslist/g_slist_insert.c: "dryad_gslist_sll.h"
+./gslist/g_slist_insert_before.c: "dryad_gslist_sll.h"
+./gslist/g_slist_remove.c: "dryad_gslist_sll.h"
+./gslist/g_slist_remove_all.c: "dryad_gslist_sll.h"
+./gslist/g_slist_remove_link.c: "dryad_gslist_sll.h"
+./gslist/g_slist_reverse.c: "dryad_gslist_sll.h"
+
+./sll/dryad_sll.h
+./sll/sll-reverse.c: "dryad_sll.h"
