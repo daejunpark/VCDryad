@@ -26,11 +26,15 @@ _(abstract _(dryad "base:srtl") \bool srtl(struct s_node * hd)
 	_(reads \universe())
 	_(ensures (hd == NULL) ==> \result)
 	_(ensures (hd != NULL && hd->next == NULL) ==> \result)
+    //
+  //_(ensures (hd != NULL && \result) ==> sll_min_key(hd) == hd->key)
 ;)
 _(abstract _(dryad "base:rsrtl") \bool rsrtl(struct s_node * hd)
 	_(reads \universe())
 	_(ensures (hd == NULL) ==> \result)
 	_(ensures (hd != NULL && hd->next == NULL) ==> \result)
+    //
+  //_(ensures (hd != NULL && \result) ==> sll_max_key(hd) == hd->key)
 ;)
 
 
@@ -76,6 +80,8 @@ _(abstract _(dryad "base:lseg") \bool sll_lseg(struct s_node * hd, struct s_node
   _(reads \universe())
   _(ensures tl == NULL ==> (\result == sll(hd)))
   _(ensures hd == tl ==> \result)
+  //
+//_(ensures (hd != NULL && hd != tl && \result) ==> sll_lseg_min_key(hd) == hd->key)
   //
   _(ensures \result ==> \oset_disjoint(sll_lseg_reach(hd,tl), \oset_singleton(tl)))
   _(ensures (\result && sll(tl)) ==> (
@@ -126,6 +132,20 @@ _(abstract _(dryad "base:slseg") \bool srtl_lseg(struct s_node * hd, struct s_no
             && sll_lseg_keys(hd,tl->next) == \intset_union(sll_lseg_keys(hd,tl), \intset_singleton(tl->key))
             && sll_lseg_len_next(hd,tl->next) == sll_lseg_len_next(hd,tl) + 1
             && sll_lseg_min_key(hd,tl->next) == sll_lseg_min_key(hd,tl)
+            && sll_lseg_max_key(hd,tl->next) == tl->key
+            ))
+  _(ensures (\result && tl != NULL
+            && hd == tl
+            && tl->next != tl
+          //&& tl->next != hd // redundant
+          //&& (! \oset_in(tl->next, sll_lseg_reach(hd,tl)))
+          //&& sll_lseg_max_key(hd,tl) <= tl->key
+            ) ==> (
+               srtl_lseg(hd,tl->next)
+            && srtl_lseg_reach(hd,tl->next) == \oset_singleton(tl)
+            && sll_lseg_keys(hd,tl->next) == \intset_singleton(tl->key)
+            && sll_lseg_len_next(hd,tl->next) == 1
+            && sll_lseg_min_key(hd,tl->next) == tl->key
             && sll_lseg_max_key(hd,tl->next) == tl->key
             ))
   ;)
@@ -332,6 +352,12 @@ _(logic _(dryad "same:rsrtl_R") \bool same_rsrtl_reach(struct s_node * x, \state
 _(logic _(dryad "same:keys") \bool same_sll_keys(struct s_node * x, \state enter, \state exit) =
 	(\at(enter, sll_keys(x)) == \at(exit, sll_keys(x)))
 ;)
+_(logic _(dryad "same:sll_min_key") \bool same_sll_min_key(struct s_node * x, \state enter, \state exit) =
+	(\at(enter, sll_min_key(x)) == \at(exit, sll_min_key(x)))
+;)
+_(logic _(dryad "same:sll_max_key") \bool same_sll_max_key(struct s_node * x, \state enter, \state exit) =
+	(\at(enter, sll_max_key(x)) == \at(exit, sll_max_key(x)))
+;)
 _(logic _(dryad "same:llen_next") \bool same_sll_list_len_next(struct s_node * x, \state enter, \state exit) =
 	\at(enter, sll_list_len_next(x)) == \at(exit, sll_list_len_next(x))
 ;)
@@ -339,12 +365,16 @@ _(logic \bool same_sll_all_un(struct s_node * x, \state enter, \state exit) =
 	same_sll(x, enter, exit) 
 	&& same_sll_reach(x, enter, exit)
 	&& same_sll_keys(x, enter, exit)
+	&& same_sll_min_key(x, enter, exit)
+	&& same_sll_max_key(x, enter, exit)
 	&& same_sll_list_len_next(x, enter, exit)
 ;)
 _(logic \bool same_srtl_all_un(struct s_node * x, \state enter, \state exit) = 
 	same_srtl(x, enter, exit) 
 	&& same_srtl_reach(x, enter, exit)
 	&& same_sll_keys(x, enter, exit)
+	&& same_sll_min_key(x, enter, exit)
+	&& same_sll_max_key(x, enter, exit)
 	&& same_sll_list_len_next(x, enter, exit)
 ;)
 
@@ -365,6 +395,12 @@ _(logic _(dryad "same:slseg_R")
 _(logic _(dryad "same:lseg_keys")
   \bool same_sll_lseg_keys(struct s_node * hd, struct s_node * tl, \state enter, \state exit) =
     (\at(enter, sll_lseg_keys(hd, tl)) == \at(exit, sll_lseg_keys(hd, tl))) ;)
+_(logic _(dryad "same:sll_lseg_min_key")
+  \bool same_sll_lseg_min_key(struct s_node * hd, struct s_node * tl, \state enter, \state exit) =
+    (\at(enter, sll_lseg_min_key(hd, tl)) == \at(exit, sll_lseg_min_key(hd, tl))) ;)
+_(logic _(dryad "same:sll_lseg_max_key")
+  \bool same_sll_lseg_max_key(struct s_node * hd, struct s_node * tl, \state enter, \state exit) =
+    (\at(enter, sll_lseg_max_key(hd, tl)) == \at(exit, sll_lseg_max_key(hd, tl))) ;)
 _(logic _(dryad "same:lseg_len_next")
   \bool same_sll_lseg_len_next(struct s_node * hd, struct s_node * tl, \state enter, \state exit) =
     \at(enter, sll_lseg_len_next(hd, tl)) == \at(exit, sll_lseg_len_next(hd, tl)) ;)
@@ -373,12 +409,16 @@ _(logic \bool same_sll_all_bin(struct s_node * hd, struct s_node * tl, \state en
 	same_sll_lseg(hd, tl, enter, exit) 
 	&& same_sll_lseg_reach(hd, tl, enter, exit)
 	&& same_sll_lseg_keys(hd, tl, enter, exit)
+	&& same_sll_lseg_min_key(hd, tl, enter, exit)
+	&& same_sll_lseg_max_key(hd, tl, enter, exit)
 	&& same_sll_lseg_len_next(hd, tl, enter, exit)
 ;)
 _(logic \bool same_srtl_all_bin(struct s_node * hd, struct s_node * tl, \state enter, \state exit) = 
 	same_srtl_lseg(hd, tl, enter, exit) 
 	&& same_srtl_lseg_reach(hd, tl, enter, exit)
 	&& same_sll_lseg_keys(hd, tl, enter, exit)
+	&& same_sll_lseg_min_key(hd, tl, enter, exit)
+	&& same_sll_lseg_max_key(hd, tl, enter, exit)
 	&& same_sll_lseg_len_next(hd, tl, enter, exit)
 ;)
 
@@ -407,6 +447,12 @@ _(logic _(dryad "cond:rsrtl_R")
 _(logic _(dryad "cond:keys") 
   \bool cond_same_sll_keys(struct s_node * x, struct s_node * y, \state enter, \state exit) =
 	  (! \oset_in(x, \at(enter, sll_reach(y)))) ==> (\at(enter, sll_keys(y)) == \at(exit, sll_keys(y))) ;)
+_(logic _(dryad "cond:sll_min_key") 
+  \bool cond_same_sll_min_key(struct s_node * x, struct s_node * y, \state enter, \state exit) =
+	  (! \oset_in(x, \at(enter, sll_reach(y)))) ==> (\at(enter, sll_min_key(y)) == \at(exit, sll_min_key(y))) ;)
+_(logic _(dryad "cond:sll_max_key") 
+  \bool cond_same_sll_max_key(struct s_node * x, struct s_node * y, \state enter, \state exit) =
+	  (! \oset_in(x, \at(enter, sll_reach(y)))) ==> (\at(enter, sll_max_key(y)) == \at(exit, sll_max_key(y))) ;)
 _(logic _(dryad "cond:llen_next") 
   \bool cond_same_sll_list_len_next(struct s_node * x, struct s_node * y, \state enter, \state exit) =
 	  (! \oset_in(x, \at(enter, sll_reach(y)))) ==> \at(enter, sll_list_len_next(y)) == \at(exit, sll_list_len_next(y))
@@ -417,12 +463,16 @@ _(logic
   	cond_same_sll(x, y, enter, exit) 
   	&& cond_same_sll_reach(x, y, enter, exit)
   	&& cond_same_sll_keys(x, y, enter, exit) 
+  	&& cond_same_sll_min_key(x, y, enter, exit) 
+  	&& cond_same_sll_max_key(x, y, enter, exit) 
   	&& cond_same_sll_list_len_next(x, y, enter, exit) ;)
 _(logic
   \bool cond_same_srtl_all_un(struct s_node * x, struct s_node * y, \state enter, \state exit) =
   	cond_same_srtl(x, y, enter, exit) 
   	&& cond_same_srtl_reach(x, y, enter, exit)
   	&& cond_same_sll_keys(x, y, enter, exit) 
+  	&& cond_same_sll_min_key(x, y, enter, exit) 
+  	&& cond_same_sll_max_key(x, y, enter, exit) 
   	&& cond_same_sll_list_len_next(x, y, enter, exit) ;)
 
 _(logic _(dryad "cond:lseg") 
@@ -452,6 +502,16 @@ _(logic _(dryad "cond:lseg_keys")
                             \state enter, \state exit) =
     ((! \oset_in(x, \at(enter, sll_lseg_reach(hd, tl)))) ==>
       (\at(enter, sll_lseg_keys(hd, tl)) == \at(exit, sll_lseg_keys(hd, tl)))) ;)
+_(logic _(dryad "cond:sll_lseg_min_key")
+  \bool cond_same_sll_lseg_min_key(struct s_node * x, struct s_node * hd, struct s_node * tl, 
+                            \state enter, \state exit) =
+    ((! \oset_in(x, \at(enter, sll_lseg_reach(hd, tl)))) ==>
+      (\at(enter, sll_lseg_min_key(hd, tl)) == \at(exit, sll_lseg_min_key(hd, tl)))) ;)
+_(logic _(dryad "cond:sll_lseg_max_key")
+  \bool cond_same_sll_lseg_max_key(struct s_node * x, struct s_node * hd, struct s_node * tl, 
+                            \state enter, \state exit) =
+    ((! \oset_in(x, \at(enter, sll_lseg_reach(hd, tl)))) ==>
+      (\at(enter, sll_lseg_max_key(hd, tl)) == \at(exit, sll_lseg_max_key(hd, tl)))) ;)
 _(logic _(dryad "cond:lseg_len_next")
   \bool cond_same_sll_lseg_len_next(struct s_node * x, struct s_node * hd, struct s_node * tl, 
                             \state enter, \state exit) =
@@ -463,6 +523,8 @@ _(logic
 	  cond_same_sll_lseg(x, hd, tl, enter, exit) 
   	&& cond_same_sll_lseg_reach(x, hd, tl, enter, exit)
   	&& cond_same_sll_lseg_keys(x, hd, tl, enter, exit)
+  	&& cond_same_sll_lseg_min_key(x, hd, tl, enter, exit)
+  	&& cond_same_sll_lseg_max_key(x, hd, tl, enter, exit)
   	&& cond_same_sll_lseg_len_next(x, hd, tl, enter, exit)
 ;)
 _(logic 
@@ -470,6 +532,8 @@ _(logic
 	  cond_same_srtl_lseg(x, hd, tl, enter, exit) 
   	&& cond_same_srtl_lseg_reach(x, hd, tl, enter, exit)
   	&& cond_same_sll_lseg_keys(x, hd, tl, enter, exit)
+  	&& cond_same_sll_lseg_min_key(x, hd, tl, enter, exit)
+  	&& cond_same_sll_lseg_max_key(x, hd, tl, enter, exit)
   	&& cond_same_sll_lseg_len_next(x, hd, tl, enter, exit)
 ;)
 
@@ -498,6 +562,12 @@ _(logic _(dryad "disj:rsrtl_R")
 _(logic _(dryad "disj:keys") 
   \bool disj_same_sll_keys(\oset heaplet, struct s_node * y, \state enter, \state exit) =
 	  (\oset_disjoint(\at(enter, heaplet), \at(enter, sll_reach(y)))) ==> (\at(enter, sll_keys(y)) == \at(exit, sll_keys(y))) ;)
+_(logic _(dryad "disj:sll_min_key") 
+  \bool disj_same_sll_min_key(\oset heaplet, struct s_node * y, \state enter, \state exit) =
+	  (\oset_disjoint(\at(enter, heaplet), \at(enter, sll_reach(y)))) ==> (\at(enter, sll_min_key(y)) == \at(exit, sll_min_key(y))) ;)
+_(logic _(dryad "disj:sll_max_key") 
+  \bool disj_same_sll_max_key(\oset heaplet, struct s_node * y, \state enter, \state exit) =
+	  (\oset_disjoint(\at(enter, heaplet), \at(enter, sll_reach(y)))) ==> (\at(enter, sll_max_key(y)) == \at(exit, sll_max_key(y))) ;)
 _(logic _(dryad "disj:llen_next") 
   \bool disj_same_sll_list_len_next(\oset heaplet, struct s_node * y, \state enter, \state exit) =
 	  (\oset_disjoint(\at(enter, heaplet), \at(enter, sll_reach(y)))) ==> \at(enter, sll_list_len_next(y)) == \at(exit, sll_list_len_next(y))
@@ -508,12 +578,16 @@ _(logic
   	disj_same_sll(\at(enter, heaplet), y, enter, exit) 
   	&& disj_same_sll_reach(\at(enter, heaplet), y, enter, exit)
   	&& disj_same_sll_keys(\at(enter, heaplet), y, enter, exit) 
+  	&& disj_same_sll_min_key(\at(enter, heaplet), y, enter, exit) 
+  	&& disj_same_sll_max_key(\at(enter, heaplet), y, enter, exit) 
   	&& disj_same_sll_list_len_next(\at(enter, heaplet), y, enter, exit) ;)
 _(logic
   \bool disj_same_srtl_all_un(\oset heaplet, struct s_node * y, \state enter, \state exit) =
   	disj_same_srtl(\at(enter, heaplet), y, enter, exit) 
   	&& disj_same_srtl_reach(\at(enter, heaplet), y, enter, exit)
   	&& disj_same_sll_keys(\at(enter, heaplet), y, enter, exit) 
+  	&& disj_same_sll_min_key(\at(enter, heaplet), y, enter, exit) 
+  	&& disj_same_sll_max_key(\at(enter, heaplet), y, enter, exit) 
   	&& disj_same_sll_list_len_next(\at(enter, heaplet), y, enter, exit) ;)
 
 _(logic _(dryad "disj:lseg") 
@@ -543,6 +617,16 @@ _(logic _(dryad "disj:lseg_keys")
                             \state enter, \state exit) =
     ((\oset_disjoint(\at(enter, heaplet), \at(enter, sll_lseg_reach(hd, tl)))) ==>
       (\at(enter, sll_lseg_keys(hd, tl)) == \at(exit, sll_lseg_keys(hd, tl)))) ;)
+_(logic _(dryad "disj:sll_lseg_min_key")
+  \bool disj_same_sll_lseg_min_key(\oset heaplet, struct s_node * hd, struct s_node * tl, 
+                            \state enter, \state exit) =
+    ((\oset_disjoint(\at(enter, heaplet), \at(enter, sll_lseg_reach(hd, tl)))) ==>
+      (\at(enter, sll_lseg_min_key(hd, tl)) == \at(exit, sll_lseg_min_key(hd, tl)))) ;)
+_(logic _(dryad "disj:sll_lseg_max_key")
+  \bool disj_same_sll_lseg_max_key(\oset heaplet, struct s_node * hd, struct s_node * tl, 
+                            \state enter, \state exit) =
+    ((\oset_disjoint(\at(enter, heaplet), \at(enter, sll_lseg_reach(hd, tl)))) ==>
+      (\at(enter, sll_lseg_max_key(hd, tl)) == \at(exit, sll_lseg_max_key(hd, tl)))) ;)
 _(logic _(dryad "disj:lseg_len_next")
   \bool disj_same_sll_lseg_len_next(\oset heaplet, struct s_node * hd, struct s_node * tl, 
                             \state enter, \state exit) =
@@ -554,6 +638,8 @@ _(logic
 	  disj_same_sll_lseg(\at(enter, heaplet), hd, tl, enter, exit) 
   	&& disj_same_sll_lseg_reach(\at(enter, heaplet), hd, tl, enter, exit)
   	&& disj_same_sll_lseg_keys(\at(enter, heaplet), hd, tl, enter, exit)
+  	&& disj_same_sll_lseg_min_key(\at(enter, heaplet), hd, tl, enter, exit)
+  	&& disj_same_sll_lseg_max_key(\at(enter, heaplet), hd, tl, enter, exit)
   	&& disj_same_sll_lseg_len_next(\at(enter, heaplet), hd, tl, enter, exit)
 ;)
 _(logic 
@@ -561,6 +647,8 @@ _(logic
 	  disj_same_srtl_lseg(\at(enter, heaplet), hd, tl, enter, exit) 
   	&& disj_same_srtl_lseg_reach(\at(enter, heaplet), hd, tl, enter, exit)
   	&& disj_same_sll_lseg_keys(\at(enter, heaplet), hd, tl, enter, exit)
+  	&& disj_same_sll_lseg_min_key(\at(enter, heaplet), hd, tl, enter, exit)
+  	&& disj_same_sll_lseg_max_key(\at(enter, heaplet), hd, tl, enter, exit)
   	&& disj_same_sll_lseg_len_next(\at(enter, heaplet), hd, tl, enter, exit)
 ;)
 
@@ -601,6 +689,10 @@ _(axiom \forall struct s_node * x; rsrtl(x) ==> sll(x))
 _(axiom \forall struct s_node * x; sll_reach(x) == srtl_reach(x))
 _(axiom \forall struct s_node * x; srtl_reach(x) == rsrtl_reach(x))
 _(axiom \forall struct s_node * x,y; sll_lseg_reach(x, y) == srtl_lseg_reach(x, y))
+
+//_(axiom \forall struct s_node * x,y; srtl_lseg(x,y) ==> sll_lseg(x,y))
+//_(axiom \forall struct s_node * x; sll(x) ==> (sll_min_key(x) <= sll_max_key(x)))
+//_(axiom \forall struct s_node * x,y; (sll_lseg(x,y) && x != y) ==> (sll_lseg_min_key(x,y) <= sll_lseg_max_key(x,y)))
 
 // dummy function denoting the end of sll s_node defs
 _(abstract _(dryad "end") void end_dl_s_node_defs(struct s_node * x) ;)
