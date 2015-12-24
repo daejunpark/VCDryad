@@ -7,8 +7,11 @@
 //#include "intset_defs.h"
 //#include "intbag_defs.h"
 
+_(int _(_boogie0) \int_max(int x, int y))
+_(int _(_boogie0) \int_min(int x, int y))
+
 typedef
-_(dryad "sll:srtl:rsrtl:sll_R:srtl_R:rsrtl_R:keys:llen_next:lseg:slseg:lseg_R:slseg_R:lseg_keys:lseg_len_next")
+_(dryad "sll:srtl:rsrtl:sll_R:srtl_R:rsrtl_R:keys:sll_min_key:sll_max_key:llen_next:lseg:slseg:lseg_R:slseg_R:lseg_keys:sll_lseg_min_key:sll_lseg_max_key:lseg_len_next")
 struct s_node {
   int key;
   struct s_node * next;
@@ -22,10 +25,12 @@ _(abstract _(dryad "base:sll") \bool sll(struct s_node * hd)
 _(abstract _(dryad "base:srtl") \bool srtl(struct s_node * hd)
 	_(reads \universe())
 	_(ensures (hd == NULL) ==> \result)
+	_(ensures (hd != NULL && hd->next == NULL) ==> \result)
 ;)
 _(abstract _(dryad "base:rsrtl") \bool rsrtl(struct s_node * hd)
 	_(reads \universe())
 	_(ensures (hd == NULL) ==> \result)
+	_(ensures (hd != NULL && hd->next == NULL) ==> \result)
 ;)
 
 
@@ -51,6 +56,16 @@ _(abstract _(dryad "base:keys") \intset sll_keys(struct s_node * hd) // [key]
 	_(ensures (hd == NULL ==> (\result == \intset_empty())))
 	;)
 
+_(abstract _(dryad "base:sll_min_key") int sll_min_key(struct s_node * hd)
+    _(reads \universe())
+    _(ensures ((hd != NULL && hd->next == NULL) ==> (\result == hd->key)))
+;)
+
+_(abstract _(dryad "base:sll_max_key") int sll_max_key(struct s_node * hd)
+    _(reads \universe())
+    _(ensures ((hd != NULL && hd->next == NULL) ==> (\result == hd->key)))
+;)
+
 _(abstract _(dryad "base:llen_next") \natural sll_list_len_next(struct s_node * x)
   _(reads \universe())
   _(ensures x != NULL ==> \result > 0)
@@ -59,76 +74,110 @@ _(abstract _(dryad "base:llen_next") \natural sll_list_len_next(struct s_node * 
 
 _(abstract _(dryad "base:lseg") \bool sll_lseg(struct s_node * hd, struct s_node * tl)
   _(reads \universe())
-  _(ensures (hd == NULL && hd != tl) ==> \result)
-  _(ensures hd == tl ==> \result)
   _(ensures tl == NULL ==> (\result == sll(hd)))
-  _(ensures (sll(tl) && \oset_disjoint(sll_reach(tl), sll_lseg_reach(hd, tl))) ==>
-             (sll(hd)
-              && sll_reach(hd) == \oset_union(sll_lseg_reach(hd, tl), sll_reach(tl)) 
-						  && (sll_keys(hd) == \intset_union(sll_keys(tl), sll_lseg_keys(hd, tl)))
-//						  && _dryad_keyb(hd) == \intbag_union(_dryad_keyb(tl), _dryad_lsegb(hd, tl))
-						 ) ) 
-  _(ensures (tl != NULL && sll(tl->next) && sll_lseg(hd, tl)
-         && \oset_disjoint(sll_reach(tl->next), sll_lseg_reach(hd, tl)) 
-		     && (! \oset_in(tl, sll_reach(tl->next)) ) 
-		     && (! \oset_in(tl, sll_lseg_reach(hd, tl)))   ) ==>
-                   (sll_lseg (hd, tl->next) 
-				   && (sll_lseg_keys(hd, tl->next) == \intset_union(\intset_singleton(tl->key), sll_lseg_keys(hd, tl))) 
-//				   && _dryad_lsegb(hd, tl->next) == \intbag_union(\intbag_singleton(tl->key), _dryad_lsegb(hd, tl))
-				   && (sll_lseg_reach(hd, tl->next) == (\oset_union(\oset_singleton(tl), sll_lseg_reach(hd, tl))))   ) ) 
+  _(ensures hd == tl ==> \result)
+  //
+  _(ensures \result ==> \oset_disjoint(sll_lseg_reach(hd,tl), \oset_singleton(tl)))
+  _(ensures (\result && sll(tl)) ==> (
+               sll(hd)
+            && sll_reach(hd) == \oset_union(sll_lseg_reach(hd,tl), sll_reach(tl))
+            && sll_keys(hd) == \intset_union(sll_lseg_keys(hd,tl), sll_keys(tl))
+            && sll_list_len_next(hd) == sll_lseg_len_next(hd,tl) + sll_list_len_next(tl)
+            ))
+  _(ensures (\result && tl != NULL
+            && tl->next != tl
+            && tl->next != hd
+            && (! \oset_in(tl->next, sll_lseg_reach(hd,tl)))
+            ) ==> (
+               sll_lseg(hd,tl->next)
+            && sll_lseg_reach(hd,tl->next) == \oset_union(sll_lseg_reach(hd,tl), \oset_singleton(tl))
+            && sll_lseg_keys(hd,tl->next) == \intset_union(sll_lseg_keys(hd,tl), \intset_singleton(tl->key))
+            && sll_lseg_len_next(hd,tl->next) == sll_lseg_len_next(hd,tl) + 1
+            ))
   ;)
 
 _(abstract _(dryad "base:slseg") \bool srtl_lseg(struct s_node * hd, struct s_node * tl)
   _(reads \universe())
-  _(ensures (hd == NULL && hd != tl) ==> \result)
-  _(ensures hd == tl ==> \result)
   _(ensures tl == NULL ==> (\result == srtl(hd)))
-  _(ensures (srtl(tl) && \oset_disjoint(srtl_reach(tl), srtl_lseg_reach(hd, tl))) ==>
-             (srtl(hd) 
-              && srtl_reach(hd) == \oset_union(srtl_lseg_reach(hd, tl), srtl_reach(tl))
-						  && (sll_keys(hd) == \intset_union(sll_keys(tl), sll_lseg_keys(hd, tl)))
-//						  && _dryad_keyb(hd) == \intbag_union(_dryad_keyb(tl), _dryad_lsegb(hd, tl))
-						 ) ) 
-  _(ensures (tl != NULL && srtl(tl->next) && srtl_lseg(hd, tl)
-         && \oset_disjoint(srtl_reach(tl->next), srtl_lseg_reach(hd, tl)) 
-		     && (! \oset_in(tl, srtl_reach(tl->next)) ) 
-		     && (! \oset_in(tl, srtl_lseg_reach(hd, tl)))   
-         && \intset_le(\intset_singleton(tl->key), sll_keys(tl->next) ) ) ==>
-         ( srtl_lseg (hd, tl->next) 
-				   && (sll_lseg_keys(hd, tl->next) == \intset_union(\intset_singleton(tl->key), sll_lseg_keys(hd, tl)))
-//				   && _dryad_lsegb(hd, tl->next) == \intbag_union(\intbag_singleton(tl->key), _dryad_lsegb(hd, tl))
-				   && (srtl_lseg_reach(hd, tl->next) == \oset_union(\oset_singleton(tl), srtl_lseg_reach(hd, tl)))   ) )
+  _(ensures hd == tl ==> \result)
+  _(ensures (hd != NULL && hd != tl && hd->next == tl) ==> \result)
+  //
+  _(ensures \result ==> \oset_disjoint(srtl_lseg_reach(hd,tl), \oset_singleton(tl)))
+  _(ensures (\result && srtl(tl)
+            && hd != tl && tl != NULL
+            && sll_lseg_max_key(hd,tl) <= sll_min_key(tl)
+            ) ==> (
+               srtl(hd)
+            && srtl_reach(hd) == \oset_union(srtl_lseg_reach(hd,tl), srtl_reach(tl))
+            && sll_keys(hd) == \intset_union(sll_lseg_keys(hd,tl), sll_keys(tl))
+            && sll_list_len_next(hd) == sll_lseg_len_next(hd,tl) + sll_list_len_next(tl)
+            && sll_min_key(hd) == sll_lseg_min_key(hd,tl)
+            && sll_max_key(hd) == sll_max_key(tl)
+            ))
+  _(ensures (\result && tl != NULL
+            && hd != tl
+            && tl->next != tl
+          //&& tl->next != hd // redundant
+            && (! \oset_in(tl->next, sll_lseg_reach(hd,tl)))
+            && sll_lseg_max_key(hd,tl) <= tl->key
+            ) ==> (
+               srtl_lseg(hd,tl->next)
+            && srtl_lseg_reach(hd,tl->next) == \oset_union(sll_lseg_reach(hd,tl), \oset_singleton(tl))
+            && sll_lseg_keys(hd,tl->next) == \intset_union(sll_lseg_keys(hd,tl), \intset_singleton(tl->key))
+            && sll_lseg_len_next(hd,tl->next) == sll_lseg_len_next(hd,tl) + 1
+            && sll_lseg_min_key(hd,tl->next) == sll_lseg_min_key(hd,tl)
+            && sll_lseg_max_key(hd,tl->next) == tl->key
+            ))
   ;)
+
+/*
+(hd != NULL && hd->next != hd) ==>
+   srtl_lseg(hd,hd->next)
+&& srtl_lseg_reach(hd,hd->next) == \oset_singleton(hd)
+&& sll_lseg_keys(hd,hd->next) == \intset_singleton(hd->key)
+&& sll_lseg_len_next(hd,hd->next) == 1
+&& sll_lseg_min_key(hd,hd->next) == hd->key
+&& sll_lseg_max_key(hd,hd->next) == hd->key
+*/
 
 _(abstract _(dryad "base:lseg_R") \oset sll_lseg_reach(struct s_node * hd, struct s_node * tl)
 	_(reads \universe())
-	_(ensures hd == NULL ==> (\result == \oset_empty()))
+	_(ensures tl == NULL ==> (\result == sll_reach(hd)))
 	_(ensures hd == tl ==> (\result == \oset_empty()))
 	_(ensures (hd != NULL && hd != tl) ==> \oset_in(hd, \result))
-	_(ensures (hd != NULL && tl == NULL) ==> (\result == sll_reach(hd)))
 ;)
 _(abstract _(dryad "base:slseg_R") \oset srtl_lseg_reach(struct s_node * hd, struct s_node * tl)
 	_(reads \universe())
-	_(ensures (hd == NULL && hd != tl) ==> (\result == \oset_empty()))
+	_(ensures tl == NULL ==> (\result == srtl_reach(hd)))
 	_(ensures hd == tl ==>   (\result == \oset_empty()))
 	_(ensures (hd != NULL && hd != tl) ==> \oset_in(hd, \result))
-	_(ensures (tl == NULL) ==> (\result == srtl_reach(hd)))
 ;)
 
 _(abstract _(dryad "base:lseg_keys") \intset sll_lseg_keys(struct s_node * hd, struct s_node * tl)
   _(reads \universe())
-  _(ensures (hd == NULL && hd != tl) ==> (\result == \intset_empty()))
+  _(ensures tl == NULL ==> (\result == sll_keys(hd)))
   _(ensures hd == tl   ==> (\result == \intset_empty()))
   _(ensures (hd != NULL && hd != tl)   ==> \intset_in(hd->key, \result))
-  _(ensures (tl == NULL) ==> (\result == sll_keys(hd)))
 ;)
+
+_(abstract _(dryad "base:sll_lseg_min_key") int sll_lseg_min_key(struct s_node * hd, struct s_node * tl)
+    _(reads \universe())
+    _(ensures tl == NULL ==> (\result == sll_min_key(hd)))
+    _(ensures ((hd != NULL && hd != tl && hd->next == tl) ==> (\result == hd->key)))
+;)
+
+_(abstract _(dryad "base:sll_lseg_max_key") int sll_lseg_max_key(struct s_node * hd, struct s_node * tl)
+    _(reads \universe())
+    _(ensures tl == NULL ==> (\result == sll_max_key(hd)))
+    _(ensures ((hd != NULL && hd != tl && hd->next == tl) ==> (\result == hd->key)))
+;)
+
 
 _(abstract _(dryad "base:lseg_len_next") \natural sll_lseg_len_next(struct s_node * hd, struct s_node * tl)
   _(reads \universe())
+  _(ensures tl == NULL ==> \result == sll_list_len_next(hd))
   _(ensures hd == tl   ==> \result == 0)
-  _(ensures (hd == NULL && hd != tl) ==> \result == 0)
   _(ensures (hd != NULL && hd != tl)   ==> \result > 0)
-  _(ensures (hd != NULL && tl == NULL) ==> \result == sll_lseg_len_next(hd, tl))
 ;)
 
 // ----------------------------------------------------------------------------------------------------------------------------
@@ -139,18 +188,18 @@ _(logic _(dryad "unfold:sll") \bool unfold_sll(struct s_node * hd) =
 			(! \oset_in(hd, sll_reach(hd->next))) ) )  )
 ;)
 _(logic _(dryad "unfold:srtl") \bool unfold_srtl(struct s_node * hd) =
-	(hd != NULL ==>
+	((hd != NULL && hd->next != NULL) ==>
 		(srtl(hd) <==> 
 			(srtl(hd->next) 
         && (! \oset_in(hd, srtl_reach(hd->next)))
-        &&    \intset_le_one1(hd->key, sll_keys(hd->next)) ) ) ) 
+        &&    hd->key <= sll_min_key(hd->next) ) ) )
 ;)
 _(logic _(dryad "unfold:rsrtl") \bool unfold_rsrtl(struct s_node * hd) =
-	(hd != NULL ==>
+	((hd != NULL && hd->next != NULL) ==>
 		(rsrtl(hd) <==> 
 			(rsrtl(hd->next) 
         && !(\oset_in(hd, rsrtl_reach(hd->next)))
-        && \intset_le_one2(sll_keys(hd->next), hd->key) ) ) ) 
+        &&    hd->key >= sll_max_key(hd->next) ) ) )
 ;)
 
 _(logic _(dryad "unfold:sll_R") \bool unfold_sll_reach(struct s_node * hd) =
@@ -170,6 +219,14 @@ _(logic _(dryad "unfold:keys") \bool unfold_sll_keys(struct s_node * hd) =
 		(hd != NULL ==> (sll_keys(hd) == (\intset_union(sll_keys(hd->next), \intset_singleton(hd->key)))))
 ;)
 
+_(logic _(dryad "unfold:sll_min_key") \bool unfold_sll_min_key(struct s_node * hd) =
+    ((hd != NULL && hd->next != NULL) ==> (sll_min_key(hd) == \int_min(hd->key, sll_min_key(hd->next))))
+;)
+
+_(logic _(dryad "unfold:sll_max_key") \bool unfold_sll_max_key(struct s_node * hd) =
+    ((hd != NULL && hd->next != NULL) ==> (sll_max_key(hd) == \int_max(hd->key, sll_max_key(hd->next))))
+;)
+
 _(logic _(dryad "unfold:llen_next") \bool unfold_sll_list_len_next(struct s_node * hd) =
     (hd != NULL ==> (sll_list_len_next(hd) == sll_list_len_next(hd->next) + 1))  
 ;)
@@ -178,12 +235,16 @@ _(logic \bool unfold_sll_all_un(struct s_node * x) =
   unfold_sll(x)
   && unfold_sll_reach(x)
 	&& unfold_sll_keys(x)
+  && unfold_sll_min_key(x)
+  && unfold_sll_max_key(x)
   && unfold_sll_list_len_next(x)
 ;)
 _(logic \bool unfold_srtl_all_un(struct s_node * x) =
   unfold_srtl(x)
 	&& unfold_srtl_reach(x)
 	&& unfold_sll_keys(x)
+  && unfold_sll_min_key(x)
+  && unfold_sll_max_key(x)
   && unfold_sll_list_len_next(x)
 ;)
 
@@ -194,11 +255,11 @@ _(logic _(dryad "unfold:lseg") \bool unfold_sll_lseg(struct s_node * hd, struct 
         (sll_lseg(hd->next,tl) && (! \oset_in(hd, sll_lseg_reach(hd->next,tl))) ) ) )
 ;)
 _(logic _(dryad "unfold:slseg") \bool unfold_srtl_lseg(struct s_node * hd, struct s_node * tl) =
-  ((hd != NULL && hd != tl) ==>
+  ((hd != NULL && hd != tl && hd->next != tl) ==>
       (srtl_lseg(hd,tl) <==> 
         (srtl_lseg(hd->next,tl) 
         && (! \oset_in(hd, srtl_lseg_reach(hd->next,tl))) 
-        && \intset_le_one1(hd->key, sll_lseg_keys(hd->next, tl)) ) ) )
+        &&    hd->key <= sll_lseg_min_key(hd->next,tl) ) ) )
   ;)
 
 _(logic _(dryad "unfold:lseg_R") \bool unfold_sll_lseg_reach(struct s_node * hd, struct s_node * tl) =
@@ -215,6 +276,14 @@ _(logic _(dryad "unfold:lseg_keys") \bool unfold_sll_lseg_keys(struct s_node * h
           \intset_union(sll_lseg_keys(hd->next, tl), \intset_singleton(hd->key)) ) )
 ;)
 
+_(logic _(dryad "unfold:sll_lseg_min_key") \bool unfold_sll_lseg_min_key(struct s_node * hd, struct s_node * tl) =
+    ((hd != NULL && hd != tl && hd->next != tl) ==> (sll_lseg_min_key(hd,tl) == \int_min(hd->key, sll_lseg_min_key(hd->next,tl))))
+;)
+
+_(logic _(dryad "unfold:sll_lseg_max_key") \bool unfold_sll_lseg_max_key(struct s_node * hd, struct s_node * tl) =
+    ((hd != NULL && hd != tl && hd->next != tl) ==> (sll_lseg_max_key(hd,tl) == \int_max(hd->key, sll_lseg_max_key(hd->next,tl))))
+;)
+
 _(logic _(dryad "unfold:lseg_len_next") \bool unfold_sll_lseg_len_next(struct s_node * hd, struct s_node * tl) =
       ((hd != NULL && hd != tl) ==> (sll_lseg_len_next(hd, tl) == (sll_lseg_len_next(hd->next, tl) + 1)))  ;)
 
@@ -222,12 +291,16 @@ _(logic \bool unfold_sll_all_bin(struct s_node * hd, struct s_node *  tl) =
   unfold_sll_lseg(hd, tl)
   && unfold_sll_lseg_reach(hd, tl)
   && unfold_sll_lseg_keys(hd, tl)
+  && unfold_sll_lseg_min_key(hd, tl)
+  && unfold_sll_lseg_max_key(hd, tl)
   && unfold_sll_lseg_len_next(hd, tl)
 ;)
 _(logic \bool unfold_srtl_all_bin(struct s_node * hd, struct s_node *  tl) =
   unfold_srtl_lseg(hd, tl)
   && unfold_srtl_lseg_reach(hd, tl)
   && unfold_sll_lseg_keys(hd, tl)
+  && unfold_sll_lseg_min_key(hd, tl)
+  && unfold_sll_lseg_max_key(hd, tl)
   && unfold_sll_lseg_len_next(hd, tl)
 ;)
 
