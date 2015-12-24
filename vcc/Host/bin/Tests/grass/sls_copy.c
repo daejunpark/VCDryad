@@ -1,13 +1,13 @@
 #include "dryad_sls.h"
 
 _(dryad)
-Node * sls_copy(Node * lst _(ghost \oset ALL_REACH))
+Node * sls_copy(Node * lst _(out \oset ALL_REACH))
   _(requires srtl(lst))
-  _(requires ALL_REACH == srtl_reach(lst))
   _(ensures srtl(lst))
   _(ensures srtl(\result))
   _(ensures \oset_disjoint(srtl_reach(lst), srtl_reach(\result)))
-  //_(ensures ALL_REACH == \oset_union(srtl_reach(lst), srtl_reach(\result)))
+  _(ensures sll_keys(lst) == sll_keys(\result))
+  _(ensures ALL_REACH == \oset_union(srtl_reach(lst), srtl_reach(\result)))
 {
   _(assume mutable_list(lst))
   _(ghost ALL_REACH = srtl_reach(lst) ;)
@@ -28,9 +28,9 @@ Node * sls_copy(Node * lst _(ghost \oset ALL_REACH))
   _(assume mutable_list(curr))
   _(assume mutable_list(cp))
   while(curr->next != NULL) 
-    _(invariant \intset_le(sll_lseg_keys(lst, curr), \intset_singleton(curr->key)))
+    _(invariant (lst != curr && curr != NULL) ==> sll_lseg_max_key(lst, curr) <= curr->key)
     _(invariant srtl(curr))
-    _(invariant \intset_le(sll_lseg_keys(head, cp), \intset_singleton(curr->key)))
+    _(invariant (head != cp && curr != NULL) ==> sll_lseg_max_key(head, cp) <= curr->key)
     _(invariant cp != NULL)
     _(invariant cp->next == NULL)
     _(invariant cp->key == curr->key)
@@ -64,8 +64,12 @@ Node * sls_copy(Node * lst _(ghost \oset ALL_REACH))
     //_(invariant \oset_subset(sll_reach(cp), ALL_REACH))
     //_(invariant \oset_subset(sll_reach(curr), ALL_REACH))
     //_(invariant sll_keys(head) == sll_lseg_keys(lst, curr->next))
+  //_(invariant ALL_REACH == \oset_union(srtl_reach(lst), srtl_lseg_reach(head,cp->next)))
     _(invariant ALL_REACH == \oset_union(srtl_reach(lst), srtl_reach(head)))
     
+    _(invariant sll_lseg_keys(lst,curr) == sll_lseg_keys(head,cp))
+  //_(invariant sll_lseg_keys(lst,curr->next) == sll_lseg_keys(head,cp->next)) // TODO: why is it failed?
+
     _(invariant mutable_list(curr))
     _(invariant mutable_list(cp))
   {
