@@ -505,6 +505,9 @@ implementation sls_concat(P#a: $ptr, P#b: $ptr) returns ($result: $ptr)
   var #wrTime$2^3.3: int;
   var #stackframe: int;
 
+// INV:PTR: P#a, P#b, L#curr
+// INV:INT:
+
   anon7:
     assume $function_entry($s);
     assume $full_stop_ext(#tok$2^3.3, $s);
@@ -663,11 +666,13 @@ implementation sls_concat(P#a: $ptr, P#b: $ptr) returns ($result: $ptr)
         loopState#0 := $s;
         assume true;
         while (true)
+// INV:BEGIN
           invariant $non_null($phys_ptr_cast(L#curr, ^s_node));
           invariant F#srtl($s, $phys_ptr_cast(L#curr, ^s_node));
           invariant F#srtl_lseg($s, $phys_ptr_cast(P#a, ^s_node), $phys_ptr_cast(L#curr, ^s_node));
           invariant $oset_disjoint(F#srtl_lseg_reach($s, $phys_ptr_cast(P#a, ^s_node), $phys_ptr_cast(L#curr, ^s_node)), F#srtl_reach($s, $phys_ptr_cast(L#curr, ^s_node)));
           invariant $phys_ptr_cast(P#a, ^s_node) != $phys_ptr_cast(L#curr, ^s_node) && $non_null($phys_ptr_cast(L#curr, ^s_node)) ==> F#sll_lseg_max_key($s, $phys_ptr_cast(P#a, ^s_node), $phys_ptr_cast(L#curr, ^s_node)) <= F#sll_min_key($s, $phys_ptr_cast(L#curr, ^s_node));
+// INV:END
           invariant $non_null($phys_ptr_cast(L#curr, ^s_node)) ==> $mutable($s, $phys_ptr_cast(L#curr, ^s_node));
           invariant $non_null($phys_ptr_cast(L#curr, ^s_node)) ==> $top_writable($s, #wrTime$2^3.3, $phys_ptr_cast(L#curr, ^s_node));
         {

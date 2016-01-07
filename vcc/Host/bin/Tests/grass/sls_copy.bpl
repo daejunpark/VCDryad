@@ -549,6 +549,9 @@ implementation sls_copy(P#lst: $ptr) returns ($result: $ptr, OP#ALL_REACH: $oset
   var #wrTime$3^3.3: int;
   var #stackframe: int;
 
+// INV:PTR: P#lst, L#head, L#curr, L#cp
+// INV:INT: L#lst_key
+
   anon6:
     assume $function_entry($s);
     assume $full_stop_ext(#tok$3^3.3, $s);
@@ -1436,6 +1439,7 @@ implementation sls_copy(P#lst: $ptr) returns ($result: $ptr, OP#ALL_REACH: $oset
     loopState#0 := $s;
     assume true;
     while (true)
+// INV:BEGIN
       invariant $phys_ptr_cast(P#lst, ^s_node) != $phys_ptr_cast(L#curr, ^s_node) && $non_null($phys_ptr_cast(L#curr, ^s_node)) ==> F#sll_lseg_max_key($s, $phys_ptr_cast(P#lst, ^s_node), $phys_ptr_cast(L#curr, ^s_node)) <= $rd_inv($s, s_node.key, $phys_ptr_cast(L#curr, ^s_node));
       invariant F#srtl($s, $phys_ptr_cast(L#curr, ^s_node));
       invariant $phys_ptr_cast(L#head, ^s_node) != $phys_ptr_cast(L#cp, ^s_node) && $non_null($phys_ptr_cast(L#curr, ^s_node)) ==> F#sll_lseg_max_key($s, $phys_ptr_cast(L#head, ^s_node), $phys_ptr_cast(L#cp, ^s_node)) <= $rd_inv($s, s_node.key, $phys_ptr_cast(L#curr, ^s_node));
@@ -1454,8 +1458,9 @@ implementation sls_copy(P#lst: $ptr) returns ($result: $ptr, OP#ALL_REACH: $oset
       invariant $oset_disjoint(F#srtl_lseg_reach($s, $phys_ptr_cast(L#head, ^s_node), $phys_ptr_cast(L#cp, ^s_node)), F#srtl_reach($s, $phys_ptr_cast(L#cp, ^s_node)));
       invariant $oset_disjoint(F#srtl_reach($s, $phys_ptr_cast(L#cp, ^s_node)), F#srtl_reach($s, $phys_ptr_cast(L#curr, ^s_node)));
       invariant $oset_disjoint(F#srtl_reach($s, $phys_ptr_cast(L#cp, ^s_node)), F#srtl_reach($s, $phys_ptr_cast(P#lst, ^s_node)));
-      invariant OP#ALL_REACH == $oset_union(F#srtl_reach($s, $phys_ptr_cast(P#lst, ^s_node)), F#srtl_reach($s, $phys_ptr_cast(L#head, ^s_node)));
       invariant F#sll_lseg_keys($s, $phys_ptr_cast(P#lst, ^s_node), $phys_ptr_cast(L#curr, ^s_node)) == F#sll_lseg_keys($s, $phys_ptr_cast(L#head, ^s_node), $phys_ptr_cast(L#cp, ^s_node));
+// INV:END
+      invariant OP#ALL_REACH == $oset_union(F#srtl_reach($s, $phys_ptr_cast(P#lst, ^s_node)), F#srtl_reach($s, $phys_ptr_cast(L#head, ^s_node)));
       invariant $non_null($phys_ptr_cast(L#curr, ^s_node)) ==> $mutable($s, $phys_ptr_cast(L#curr, ^s_node));
       invariant $non_null($phys_ptr_cast(L#curr, ^s_node)) ==> $top_writable($s, #wrTime$3^3.3, $phys_ptr_cast(L#curr, ^s_node));
       invariant $non_null($phys_ptr_cast(L#cp, ^s_node)) ==> $mutable($s, $phys_ptr_cast(L#cp, ^s_node));

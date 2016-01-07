@@ -499,6 +499,9 @@ implementation sls_dispose(P#lst: $ptr) returns (OP#ALL_REACH: $oset)
   var #wrTime$2^3.3: int;
   var #stackframe: int;
 
+// INV:PTR: P#lst, local.lst
+// INV:INT:
+
   anon4:
     assume $function_entry($s);
     assume $full_stop_ext(#tok$2^3.3, $s);
@@ -555,7 +558,9 @@ implementation sls_dispose(P#lst: $ptr) returns (OP#ALL_REACH: $oset)
     loopState#0 := $s;
     assume true;
     while (true)
+// INV:BEGIN
       invariant F#srtl($s, $phys_ptr_cast(local.lst, ^s_node));
+// INV:END
       invariant OP#ALL_REACH == F#srtl_reach($s, $phys_ptr_cast(local.lst, ^s_node));
       invariant $non_null($phys_ptr_cast(local.lst, ^s_node)) ==> $mutable($s, $phys_ptr_cast(local.lst, ^s_node));
       invariant $non_null($phys_ptr_cast(local.lst, ^s_node)) ==> $top_writable($s, #wrTime$2^3.3, $phys_ptr_cast(local.lst, ^s_node));

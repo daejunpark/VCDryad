@@ -512,6 +512,9 @@ implementation sls_filter(P#x: $ptr) returns ($result: $ptr)
   var #wrTime$2^3.3: int;
   var #stackframe: int;
 
+// INV:PTR: P#x, L#prv, L#curr, L#res
+// INV:INT: L#nondet
+
   anon9:
     assume $function_entry($s);
     assume $full_stop_ext(#tok$2^3.3, $s);
@@ -687,6 +690,7 @@ implementation sls_filter(P#x: $ptr) returns ($result: $ptr)
     loopState#0 := $s;
     assume true;
     while (true)
+// INV:BEGIN
       invariant F#srtl($s, $phys_ptr_cast(L#prv, ^s_node));
       invariant F#srtl($s, $phys_ptr_cast(L#res, ^s_node));
       invariant F#srtl_lseg($s, $phys_ptr_cast(L#res, ^s_node), $phys_ptr_cast(L#prv, ^s_node));
@@ -694,6 +698,7 @@ implementation sls_filter(P#x: $ptr) returns ($result: $ptr)
       invariant $oset_disjoint(F#srtl_lseg_reach($s, $phys_ptr_cast(L#res, ^s_node), $phys_ptr_cast(L#prv, ^s_node)), F#srtl_reach($s, $phys_ptr_cast(L#prv, ^s_node)));
       invariant $non_null($phys_ptr_cast(L#prv, ^s_node)) ==> $rd_phys_ptr($s, s_node.next, $phys_ptr_cast(L#prv, ^s_node), ^s_node) == $phys_ptr_cast(L#curr, ^s_node);
       invariant $is_null($phys_ptr_cast(L#prv, ^s_node)) ==> $phys_ptr_cast(L#res, ^s_node) == $phys_ptr_cast(L#curr, ^s_node);
+// INV:END
       invariant $non_null($phys_ptr_cast(L#prv, ^s_node)) ==> $mutable($s, $phys_ptr_cast(L#prv, ^s_node));
       invariant $non_null($phys_ptr_cast(L#prv, ^s_node)) ==> $top_writable($s, #wrTime$2^3.3, $phys_ptr_cast(L#prv, ^s_node));
       invariant $non_null($phys_ptr_cast(L#curr, ^s_node)) ==> $mutable($s, $phys_ptr_cast(L#curr, ^s_node));

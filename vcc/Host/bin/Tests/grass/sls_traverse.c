@@ -16,6 +16,7 @@ void sls_traverse1(Node * lst)
   }
 }
 
+/*
 _(dryad)
 void sls_traverse2(Node * lst)
   _(requires srtl(lst))
@@ -34,3 +35,4 @@ void sls_traverse2(Node * lst)
     }
   }
 }
+*/
