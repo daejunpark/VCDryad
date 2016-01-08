@@ -1,4 +1,4 @@
-#include "dryad_gslist.h"
+#include "dryad_gslist_sll.h"
 
 _(dryad)
 void g_slist_free(Node * l _(out \oset ALL_REACH))

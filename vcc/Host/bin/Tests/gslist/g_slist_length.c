@@ -1,4 +1,4 @@
-#include "dryad_gslist.h"
+#include "dryad_gslist_sll.h"
 
 _(dryad)
 unsigned int g_slist_length(Node * list)

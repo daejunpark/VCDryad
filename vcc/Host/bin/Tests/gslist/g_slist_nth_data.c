@@ -1,4 +1,4 @@
-#include "dryad_gslist.h"
+#include "dryad_gslist_sll.h"
 
 _(dryad)
 int g_slist_nth_data(Node * list, int n _(out Node * ret_list))

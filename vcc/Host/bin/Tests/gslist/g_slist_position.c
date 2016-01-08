@@ -1,4 +1,4 @@
-#include "dryad_gslist.h"
+#include "dryad_gslist_sll.h"
 
 _(dryad)
 int g_slist_position(Node * list, Node * link)
