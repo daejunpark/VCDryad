@@ -1,0 +1,19 @@
+#include "dryad_rbt.h"
+
+_(logic \bool mutable_rbt(RBTNode * x) = x != NULL ==> \mutable(x) && \writable(x))
+
+_(dryad)
+int rbt_find_smallest(RBTNode * x)
+	_(requires x != NULL && rbt(x))
+  _(ensures \intset_le_one1(\result, rbt_keys(x)))
+{
+	_(assume mutable_rbt(x))
+	
+	if (x->left == NULL) {
+		return x->key;
+	} else {
+		int r = rbt_find_smallest(x->left);
+		return r;
+	}
+}
+

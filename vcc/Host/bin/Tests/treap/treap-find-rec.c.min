@@ -1,0 +1,25 @@
+#include "dryad_treap.h"
+
+_(logic \bool mutable_treap(BNode * x) = x != NULL ==> \mutable(x) && \writable(x))
+
+_(dryad)
+int treap_find_rec(BNode * x, int k)
+  _(requires treap(x))
+  _(ensures  (\result == 0) <==> !\intset_in(k, treap_keys(x)))
+  _(ensures  (\result == 1) <==>  \intset_in(k, treap_keys(x)))
+{
+  _(assume mutable_treap(x))
+  if (x == NULL) {
+    return 0;
+  } else {
+      if (k == x->key) {
+        return 1;
+      } else if (k < x->key) {
+        int r = treap_find_rec(x->left, k);
+        return r;
+      } else {
+        int r = treap_find_rec(x->right, k);
+        return r;
+    }
+  }
+}
