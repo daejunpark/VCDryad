@@ -1,31 +1,3 @@
-
-const {:existential true} b0000 : bool;
-const {:existential true} b0001 : bool;
-const {:existential true} b0002 : bool;
-const {:existential true} b0003 : bool;
-const {:existential true} b0004 : bool;
-const {:existential true} b0005 : bool;
-const {:existential true} b0006 : bool;
-const {:existential true} b0007 : bool;
-const {:existential true} b0008 : bool;
-const {:existential true} b0009 : bool;
-const {:existential true} b0010 : bool;
-const {:existential true} b0011 : bool;
-const {:existential true} b0012 : bool;
-const {:existential true} b0013 : bool;
-const {:existential true} b0014 : bool;
-const {:existential true} b0015 : bool;
-const {:existential true} b0016 : bool;
-const {:existential true} b0017 : bool;
-const {:existential true} b0018 : bool;
-const {:existential true} b0019 : bool;
-const {:existential true} b0020 : bool;
-const {:existential true} b0021 : bool;
-const {:existential true} b0022 : bool;
-const {:existential true} b0023 : bool;
-const {:existential true} b0024 : bool;
-const {:existential true} b0025 : bool;
-
 axiom $arch_ptr_size == 8;
 
 axiom $arch_spec_ptr_start == $max.u8;
@@ -172,33 +144,10 @@ procedure bst_find_rec(P#x: $ptr, P#k: int) returns ($result: int);
   modifies $s, $cev_pc;
   free ensures $in_range_i4($result);
   ensures F#bst($s, $phys_ptr_cast(P#x, ^b_node));
-ensures b0000 ==> (F#bst($s,$phys_ptr_cast(P#x,^b_node)));
-ensures b0001 ==> ((F#bst_reach($s,$phys_ptr_cast(P#x,^b_node)) == F#bst_reach(old($s),$phys_ptr_cast(P#x,^b_node))));
-ensures b0002 ==> ($non_null($phys_ptr_cast(P#x,^b_node)));
-ensures b0003 ==> ($is_null($phys_ptr_cast(P#x,^b_node)));
-ensures b0004 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> $non_null($rd_phys_ptr($s,b_node.left,$phys_ptr_cast(P#x,^b_node),^b_node))));
-ensures b0005 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> $is_null($rd_phys_ptr($s,b_node.left,$phys_ptr_cast(P#x,^b_node),^b_node))));
-ensures b0006 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> $non_null($rd_phys_ptr($s,b_node.right,$phys_ptr_cast(P#x,^b_node),^b_node))));
-ensures b0007 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> $is_null($rd_phys_ptr($s,b_node.right,$phys_ptr_cast(P#x,^b_node),^b_node))));
-ensures b0008 ==> ((!($intset_in(P#k,F#bst_keys($s,$phys_ptr_cast(P#x,^b_node))))));
-ensures b0009 ==> ((!($intset_in($result,F#bst_keys($s,$phys_ptr_cast(P#x,^b_node))))));
-ensures b0010 ==> ($intset_in(P#k,F#bst_keys($s,$phys_ptr_cast(P#x,^b_node))));
-ensures b0011 ==> ($intset_in($result,F#bst_keys($s,$phys_ptr_cast(P#x,^b_node))));
-ensures b0012 ==> ((F#bst_keys($s,$phys_ptr_cast(P#x,^b_node)) == F#bst_keys(old($s),$phys_ptr_cast(P#x,^b_node))));
-ensures b0013 ==> ((P#k < 2147483647));
-ensures b0014 ==> (($result < 2147483647));
-ensures b0015 ==> ((P#k < 4294967295));
-ensures b0016 ==> (($result < 4294967295));
-ensures b0017 ==> ((P#k >= 0));
-ensures b0018 ==> (($result >= 0));
-ensures b0019 ==> (($rd_inv($s,b_node.key,$phys_ptr_cast(P#x,^b_node)) < P#k));
-ensures b0020 ==> (($rd_inv($s,b_node.key,$phys_ptr_cast(P#x,^b_node)) < $result));
-ensures b0021 ==> ($intset_le(F#bst_keys($s,$phys_ptr_cast(P#x,^b_node)),$intset_singleton(P#k)));
-ensures b0022 ==> ($intset_le(F#bst_keys($s,$phys_ptr_cast(P#x,^b_node)),$intset_singleton($result)));
-ensures b0023 ==> ($intset_le($intset_singleton(P#k),F#bst_keys($s,$phys_ptr_cast(P#x,^b_node))));
-ensures b0024 ==> ($intset_le($intset_singleton($result),F#bst_keys($s,$phys_ptr_cast(P#x,^b_node))));
-ensures b0025 ==> ($intset_le($intset_singleton($rd_inv($s,b_node.key,$phys_ptr_cast(P#x,^b_node))),F#bst_keys($s,$phys_ptr_cast(P#x,^b_node))));
-
+// INV:BEGIN
+  ensures F#bst_reach($s, $phys_ptr_cast(P#x, ^b_node)) == F#bst_reach(old($s), $phys_ptr_cast(P#x, ^b_node));
+  ensures F#bst_keys($s, $phys_ptr_cast(P#x, ^b_node)) == F#bst_keys(old($s), $phys_ptr_cast(P#x, ^b_node));
+// INV:END
   ensures ($result == 0) == !$intset_in(P#k, F#bst_keys($s, $phys_ptr_cast(P#x, ^b_node)));
   ensures ($result == 1) == $intset_in(P#k, F#bst_keys($s, $phys_ptr_cast(P#x, ^b_node)));
   free ensures $writes_nothing(old($s), $s);
@@ -441,4 +390,3 @@ axiom $file_name_is(1, #file^z?3A?5Cinvariantsynthesis?5Cvcdryad?5Cvcc?5Chost?5C
 const unique #distTp1: $ctype;
 
 axiom #distTp1 == $ptr_to(^b_node);
-

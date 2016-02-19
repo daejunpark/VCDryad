@@ -1,47 +1,3 @@
-
-const {:existential true} b0000 : bool;
-const {:existential true} b0001 : bool;
-const {:existential true} b0002 : bool;
-const {:existential true} b0003 : bool;
-const {:existential true} b0004 : bool;
-const {:existential true} b0005 : bool;
-const {:existential true} b0006 : bool;
-const {:existential true} b0007 : bool;
-const {:existential true} b0008 : bool;
-const {:existential true} b0009 : bool;
-const {:existential true} b0010 : bool;
-const {:existential true} b0011 : bool;
-const {:existential true} b0012 : bool;
-const {:existential true} b0013 : bool;
-const {:existential true} b0014 : bool;
-const {:existential true} b0015 : bool;
-const {:existential true} b0016 : bool;
-const {:existential true} b0017 : bool;
-const {:existential true} b0018 : bool;
-const {:existential true} b0019 : bool;
-const {:existential true} b0020 : bool;
-const {:existential true} b0021 : bool;
-const {:existential true} b0022 : bool;
-const {:existential true} b0023 : bool;
-const {:existential true} b0024 : bool;
-const {:existential true} b0025 : bool;
-const {:existential true} b0026 : bool;
-const {:existential true} b0027 : bool;
-const {:existential true} b0028 : bool;
-const {:existential true} b0029 : bool;
-const {:existential true} b0030 : bool;
-const {:existential true} b0031 : bool;
-const {:existential true} b0032 : bool;
-const {:existential true} b0033 : bool;
-const {:existential true} b0034 : bool;
-const {:existential true} b0035 : bool;
-const {:existential true} b0036 : bool;
-const {:existential true} b0037 : bool;
-const {:existential true} b0038 : bool;
-const {:existential true} b0039 : bool;
-const {:existential true} b0040 : bool;
-const {:existential true} b0041 : bool;
-
 axiom $arch_ptr_size == 8;
 
 axiom $arch_spec_ptr_start == $max.u8;
@@ -212,49 +168,9 @@ procedure bst_delete_rec(P#x: $ptr, P#k: int) returns ($result: $ptr);
   requires $intset_in(P#k, F#bst_keys($s, $phys_ptr_cast(P#x, ^b_node)));
   modifies $s, $cev_pc;
   ensures F#bst($s, $phys_ptr_cast($result, ^b_node));
-ensures b0000 ==> (F#bst($s,$phys_ptr_cast(P#x,^b_node)));
-ensures b0001 ==> (F#bst($s,$phys_ptr_cast($result,^b_node)));
-ensures b0002 ==> ((F#bst_reach($s,$phys_ptr_cast(P#x,^b_node)) == F#bst_reach($s,$phys_ptr_cast($result,^b_node))));
-ensures b0003 ==> ((F#bst_reach($s,$phys_ptr_cast($result,^b_node)) == F#bst_reach($s,$phys_ptr_cast(P#x,^b_node))));
-ensures b0004 ==> ((F#bst_reach($s,$phys_ptr_cast(P#x,^b_node)) == F#bst_reach(old($s),$phys_ptr_cast(P#x,^b_node))));
-ensures b0005 ==> ((F#bst_reach($s,$phys_ptr_cast($result,^b_node)) == F#bst_reach(old($s),$phys_ptr_cast($result,^b_node))));
-ensures b0006 ==> ($non_null($phys_ptr_cast(P#x,^b_node)));
-ensures b0007 ==> ($non_null($phys_ptr_cast($result,^b_node)));
-ensures b0008 ==> ($is_null($phys_ptr_cast(P#x,^b_node)));
-ensures b0009 ==> ($is_null($phys_ptr_cast($result,^b_node)));
-ensures b0010 ==> (($phys_ptr_cast(P#x,^b_node) == $phys_ptr_cast($result,^b_node)));
-ensures b0011 ==> (($phys_ptr_cast($result,^b_node) == $phys_ptr_cast(P#x,^b_node)));
-ensures b0012 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> $non_null($rd_phys_ptr($s,b_node.left,$phys_ptr_cast(P#x,^b_node),^b_node))));
-ensures b0013 ==> (($non_null($phys_ptr_cast($result,^b_node)) ==> $non_null($rd_phys_ptr($s,b_node.left,$phys_ptr_cast($result,^b_node),^b_node))));
-ensures b0014 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> $is_null($rd_phys_ptr($s,b_node.left,$phys_ptr_cast(P#x,^b_node),^b_node))));
-ensures b0015 ==> (($non_null($phys_ptr_cast($result,^b_node)) ==> $is_null($rd_phys_ptr($s,b_node.left,$phys_ptr_cast($result,^b_node),^b_node))));
-ensures b0016 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> ($rd_phys_ptr($s,b_node.left,$phys_ptr_cast(P#x,^b_node),^b_node) == $phys_ptr_cast($result,^b_node))));
-ensures b0017 ==> (($non_null($phys_ptr_cast($result,^b_node)) ==> ($rd_phys_ptr($s,b_node.left,$phys_ptr_cast($result,^b_node),^b_node) == $phys_ptr_cast(P#x,^b_node))));
-ensures b0018 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> $non_null($rd_phys_ptr($s,b_node.right,$phys_ptr_cast(P#x,^b_node),^b_node))));
-ensures b0019 ==> (($non_null($phys_ptr_cast($result,^b_node)) ==> $non_null($rd_phys_ptr($s,b_node.right,$phys_ptr_cast($result,^b_node),^b_node))));
-ensures b0020 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> $is_null($rd_phys_ptr($s,b_node.right,$phys_ptr_cast(P#x,^b_node),^b_node))));
-ensures b0021 ==> (($non_null($phys_ptr_cast($result,^b_node)) ==> $is_null($rd_phys_ptr($s,b_node.right,$phys_ptr_cast($result,^b_node),^b_node))));
-ensures b0022 ==> (($non_null($phys_ptr_cast(P#x,^b_node)) ==> ($rd_phys_ptr($s,b_node.right,$phys_ptr_cast(P#x,^b_node),^b_node) == $phys_ptr_cast($result,^b_node))));
-ensures b0023 ==> (($non_null($phys_ptr_cast($result,^b_node)) ==> ($rd_phys_ptr($s,b_node.right,$phys_ptr_cast($result,^b_node),^b_node) == $phys_ptr_cast(P#x,^b_node))));
-ensures b0024 ==> ((F#bst_keys($s,$phys_ptr_cast(P#x,^b_node)) == F#bst_keys($s,$phys_ptr_cast($result,^b_node))));
-ensures b0025 ==> ((F#bst_keys($s,$phys_ptr_cast($result,^b_node)) == F#bst_keys($s,$phys_ptr_cast(P#x,^b_node))));
-ensures b0026 ==> ((F#bst_keys($s,$phys_ptr_cast(P#x,^b_node)) == F#bst_keys(old($s),$phys_ptr_cast(P#x,^b_node))));
-ensures b0027 ==> ((F#bst_keys($s,$phys_ptr_cast($result,^b_node)) == F#bst_keys(old($s),$phys_ptr_cast($result,^b_node))));
-ensures b0028 ==> ((F#bst_keys($s,$phys_ptr_cast(P#x,^b_node)) == $intset_union(F#bst_keys(old($s),$phys_ptr_cast(P#x,^b_node)),$intset_singleton(P#k))));
-ensures b0029 ==> ((F#bst_keys($s,$phys_ptr_cast($result,^b_node)) == $intset_union(F#bst_keys(old($s),$phys_ptr_cast($result,^b_node)),$intset_singleton(P#k))));
-ensures b0030 ==> ((P#k < 2147483647));
-ensures b0031 ==> ((P#k < 2147483647));
-ensures b0032 ==> ((P#k < 4294967295));
-ensures b0033 ==> ((P#k < 4294967295));
-ensures b0034 ==> ((P#k >= 0));
-ensures b0035 ==> ((P#k >= 0));
-ensures b0036 ==> (($rd_inv($s,b_node.key,$phys_ptr_cast(P#x,^b_node)) < P#k));
-ensures b0037 ==> (($rd_inv($s,b_node.key,$phys_ptr_cast($result,^b_node)) < P#k));
-ensures b0038 ==> (($rd_inv($s,b_node.key,$phys_ptr_cast(P#x,^b_node)) <= $rd_inv($s,b_node.key,$phys_ptr_cast($result,^b_node))));
-ensures b0039 ==> (($rd_inv($s,b_node.key,$phys_ptr_cast($result,^b_node)) <= $rd_inv($s,b_node.key,$phys_ptr_cast(P#x,^b_node))));
-ensures b0040 ==> (($rd_inv($s,b_node.key,$phys_ptr_cast(P#x,^b_node)) == $rd_inv($s,b_node.key,$phys_ptr_cast($result,^b_node))));
-ensures b0041 ==> (($rd_inv($s,b_node.key,$phys_ptr_cast($result,^b_node)) == $rd_inv($s,b_node.key,$phys_ptr_cast(P#x,^b_node))));
-
+// INV:BEGIN
+  ensures F#bst_keys($s, $phys_ptr_cast($result, ^b_node)) == $intset_diff(F#bst_keys(old($s), $phys_ptr_cast(P#x, ^b_node)), $intset_singleton(P#k));
+// INV:END
   free ensures $writes_nothing(old($s), $s);
   free ensures $call_transition(old($s), $s);
 
@@ -1119,4 +1035,3 @@ axiom $file_name_is(1, #file^Z?3A?5CInvariantSynthesis?5CVCDryad?2Dbin?5CHeaders
 const unique #distTp1: $ctype;
 
 axiom #distTp1 == $ptr_to(^b_node);
-
