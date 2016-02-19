@@ -130,6 +130,10 @@ var patterns_data = [
   //['le_i', ['keys', 0   ], ['singleton_i', -1        ]], ['le_i', ['singleton_i', -1        ], ['keys', 0   ]], 
   ////
   //['le_i', ['keys', 1   ], ['singleton_i', ['key', 0]]], ['le_i', ['singleton_i', ['key', 0]], ['keys', 0   ]], 
+    ['implies', ['non_null', 0], ['eq', ['min_key', 1], ['min', ['min_key_old', 0], -1]]],
+    ['implies', ['non_null', 0], ['eq', ['max_key', 1], ['max', ['max_key_old', 0], -1]]],
+    ['implies', ['is_null',  0], ['eq', ['min_key', 1], -1]],
+    ['implies', ['is_null',  0], ['eq', ['max_key', 1], -1]],
 ];
 
 function ts(t,p,i) {
@@ -158,6 +162,18 @@ function ts(t,p,i) {
             } else {
                 return 'F#' + lst2 +      '_keys($s,' + ts(t[1],p,i) +                    ')';
             }
+        case 'min_key':
+                return 'F#' + lst2 +   '_min_key($s,' + ts(t[1],p,i) +                    ')';
+        case 'max_key':
+                return 'F#' + lst2 +   '_max_key($s,' + ts(t[1],p,i) +                    ')';
+        case 'min_key_old':
+                return 'F#' + lst2 +   '_min_key(old($s),' + ts(t[1],p,i) +                    ')';
+        case 'max_key_old':
+                return 'F#' + lst2 +   '_max_key(old($s),' + ts(t[1],p,i) +                    ')';
+        case 'min':
+                return '$int_min(' + ts(t[1],p,i) + ',' + ts(t[2],p,i) + ')';
+        case 'max':
+                return '$int_max(' + ts(t[1],p,i) + ',' + ts(t[2],p,i) + ')';
         case 'len':
             if (t.length > 2) {
                 return 'F#' + lst2 + '_lseg_len_next($s,' + ts(t[1],p,i) + ',' + ts(t[2],p,i) + ')';
