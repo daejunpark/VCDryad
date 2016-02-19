@@ -12,7 +12,7 @@ Node * sls_reverse(Node * lst)
     _(invariant srtl(curr))
     _(invariant rsrtl(rev))
     _(invariant \oset_disjoint(rsrtl_reach(rev), srtl_reach(curr)))
-    _(invariant curr != NULL ==> \intset_le(sll_keys(rev), \intset_singleton(curr->key)))
+    _(invariant rev != NULL && curr != NULL ==> sll_max_key(rev) <= curr->key)
     _(invariant mutable_list(curr))
   {
     Node * tmp;
