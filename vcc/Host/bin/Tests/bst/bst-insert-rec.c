@@ -8,6 +8,11 @@ BNode * bst_insert_rec(BNode * x, int k)
   _(requires !\intset_in(k, bst_keys(x)))
   _(ensures bst(\result))
   _(ensures bst_keys(\result) == \intset_union(\old(bst_keys(x)), \intset_singleton(k)))
+  _(ensures x != NULL ==> bst_min_key(\result) == \int_min(\old(bst_min_key(x)), k))
+  _(ensures x == NULL ==> bst_min_key(\result) == k)
+  _(ensures x != NULL ==> bst_max_key(\result) == \int_max(\old(bst_max_key(x)), k))
+  _(ensures x == NULL ==> bst_max_key(\result) == k)
+  _(ensures \result != NULL)
 {
   _(assume mutable_bst(x))
 

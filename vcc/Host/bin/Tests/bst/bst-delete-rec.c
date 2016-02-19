@@ -4,10 +4,11 @@ _(logic \bool mutable_bst(BNode * x) = x != NULL ==> \mutable(x) && \writable(x)
 
 BNode * bst_remove_root(BNode * x)
   _(requires bst(x))
-  _(requires \intset_le(bst_keys(x->left), bst_keys(x->right)))
   _(ensures bst(\result))
   _(ensures bst_keys(\result) == \intset_diff(\old(bst_keys(x)), \intset_singleton(x->key)))
-  _(ensures bst_keys(\result) == \intset_union(\old(bst_keys(x->left)), \old(bst_keys(x->right))))  
+//_(ensures bst_keys(\result) == \intset_union(\old(bst_keys(x->left)), \old(bst_keys(x->right))))
+  _(ensures bst_min_key(\result) >= \old(bst_min_key(x)))
+  _(ensures bst_max_key(\result) <= \old(bst_max_key(x)))
 ;
 
 _(dryad)
@@ -16,6 +17,8 @@ BNode * bst_delete_rec(BNode * x, int k)
   _(requires \intset_in(k, bst_keys(x)))
   _(ensures bst(\result))
   _(ensures bst_keys(\result) == (\intset_diff(\old(bst_keys(x)), \intset_singleton(k))))
+  _(ensures bst_min_key(\result) >= \old(bst_min_key(x)))
+  _(ensures bst_max_key(\result) <= \old(bst_max_key(x)))
 {
   _(assume mutable_bst(x))
 
