@@ -1,5 +1,4 @@
-#include "dryad_gslist.h"
-//#include "dryad_srtl.h"
+#include "dryad_srtl.h"
 
 _(dryad)
 Node * sorted_insert_iter(Node * l, int k)

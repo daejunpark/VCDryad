@@ -1,7 +1,7 @@
 #include "dryad_srtl.h"
 
 _(dryad)
-SNnode * find_last_sorted(SNnode * l)
+Node * find_last_sorted(Node * l)
 	_(requires srtl(l))
 	_(ensures srtl(l))
 	_(ensures srtl_lseg(l, \result) && \oset_disjoint(srtl_lseg_reach(l, \result), srtl_reach(\result))) //	_(ensures \srtlsegStar(l, \result)) 
@@ -18,7 +18,7 @@ SNnode * find_last_sorted(SNnode * l)
 	//_(ensures l != NULL ==> (sll_keys(\result) == \intset_singleton(\result->key)))
 {
 	_(assume mutable_list(l))
-  SNnode * curr = l;
+  Node * curr = l;
 	if (curr != NULL) {
 	  while (curr->next != NULL)
 			_(invariant srtl(l))
